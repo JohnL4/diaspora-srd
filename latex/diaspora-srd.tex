@@ -1,0 +1,71 @@
+%%% Main LaTeX file for the diaspora-srd project.
+%%%
+%%% This file is distributed under the Artistic Licence, v.2.0
+%%% You should have received a file containing the license along
+%%% with this file; if not see:
+%%% http://www.perlfoundation.org/artistic_license_2_0
+%%%
+%%% TODO simplify producing different page formats
+%%%   landscape/portrait ; letterpaper/a4paper
+\documentclass[10pt,twocolumn,landscape,letterpaper]{memoir}
+% \documentclass[10pt,twocolumn,landscape,letterpaper]{rpgrulebook}
+% This file was converted from HTML to LaTeX with
+% Tomasz Wegrzanowski's <maniek@beer.com> gnuhtml2latex program
+% \documentclass[onecolumn]{memoir}
+% \documentclass[twocolumn]{memoir}
+% \documentclass[10pt,twocolumn,letterpaper]{rpgrulebook}
+% \documentclass[10pt,onecolumn,letterpaper]{rpgrulebook}
+% \documentclass[10pt,onecolumn,landscape,letterpaper]{rpgrulebook}
+
+\usepackage{diaspora-srd} % customizations
+
+\title{Diaspora SRD}
+\include{credits}
+
+% TODO: complete index
+\makeindex
+% TODO: create glossary
+% \makeglossary
+
+\begin{document}
+
+\frontmatter
+\maketitle
+
+\footnoterule
+% TODO bottom-align this
+% \footnotetext{
+This file version \VERSION
+
+Diaspora is \copyright~\href{http://www.vsca.ca/Diaspora}{VSCA Publishing}
+% }
+
+\tableofcontents
+\listoftables
+\mainmatter
+
+\input{\CHAPTERDIR/01}
+\input{\CHAPTERDIR/02}
+% \input{C03/characters}
+% \input{C04/play}
+% \input{C05/personal-combat}
+% \input{C06/space-combat}
+% \input{C07/social-combat}
+% \input{C08/platoon-combat}
+% \input{C09/making-it-work}
+
+\backmatter
+
+\input{\INCDIR/OGL}
+
+\cleardoublepage
+\printindex
+
+%%% TODO bibliography?
+% \clearpage
+% \bibliographystyle{alpha}
+% \bibliographystyle{plain}
+% \bibliographystyle{apa}
+% \bibliography{inc/SRD.bib}
+
+\end{document}

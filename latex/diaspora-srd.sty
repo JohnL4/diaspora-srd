@@ -1,0 +1,287 @@
+%%% LaTeX customizations for the diaspora-srd project.
+%%%
+%%% This file is distributed under the Artistic Licence, v.2.0
+%%% You should have received a file containing the license along
+%%% with this file; if not see:
+%%% http://www.perlfoundation.org/artistic_license_2_0
+%%%
+\def\VERSION{0.1.0-landscape}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{diaspora-srd}[2010/03/25 Customizations for the Diaspora SRD project, version \VERSION]
+%
+
+%
+% \RequirePackage{graphicx}[1999/02/16]
+% \RequirePackage{natbib}
+\RequirePackage{booktabs}%[2005/04/14]
+% \RequirePackage{float}
+% \RequirePackage{multirow}
+% \RequirePackage{textcomp}
+% \RequirePackage{tikz}
+% \RequirePackage{ifthen}
+\RequirePackage{xcolor}[2007/01/21]
+%%% Option parsing and command definition
+\RequirePackage{xparse}[2008-08-03]
+% \RequirePackage{xkeyval}
+\RequirePackage{wrapfig}
+
+%%% save for last:
+\RequirePackage{hyperref}
+%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% GENERAL-PURPOSE MACROS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% shortcut to implementing new length definitions
+\newcommand{\definelength}[2]{\newlength{#1}\setlength{#1}{#2}}
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% PROJECT-MANAGEMENT MACROS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Shortcuts to places in the project tree
+\def\CHAPTERDIR{chapter}
+\def\INCDIR{inc}
+\def\SIDEBARDIR{sidebar}
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% LAYOUT MACROS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% We want a callout box for ``rule'' boxes that pop up in the
+%%% margin to give quickly accessible short rules.
+%%% This is small, sans-serif, with delineating bars.
+%%%
+%%% We create a ``calloutbox'' command, and then a ``rulebox''
+%%% shortcut.
+%% font, colour and text layout specifications
+% \def\sidebarfont{\sffamily} % from memoir class
+\def\CBtitlestyle{\color{white}\normalsize\sffamily\bfseries}
+\def\CBparstyle{\raggedright\footnotesize\sffamily}
+%% widths & lengths
+\setlength{\sidebarwidth}{12ex} % from memoir class
+\definelength{\CBwidth}{0.95\sidebarwidth}
+\setlength{\sidebarhsep}{1ex} % from memoir class
+\setlength{\marginparwidth}{\CBwidth}
+%% Syntax: \calloutbox{Title}{Body text}
+\newcommand{\calloutbox}[2]{%
+\sidebar{\scriptsize
+\rule{\CBwidth}{\onelineskip}%
+\vspace{-0.9\onelineskip}\\
+\centerline{{\CBtitlestyle#1}}%
+\vspace{0.5\onelineskip}\\
+\CBparstyle #2 \\
+\rule{\CBwidth}{1pt}\\
+\rule[\onelineskip]{\CBwidth}{2.5pt}
+}%
+}%
+%
+%% convenience shortcut
+\newcommand{\rulebox}[1] { \calloutbox{Rule}{#1} \textbf{Rule:~} #1}%
+% or possibly, if it's not going to be confused with \rule:
+% \newcommand{\Rule}[1] { \calloutbox{Rule}{#1} \textbf{Rule:} #1}%
+%
+
+%%% Sidebox float
+%%% This is a box that is set apart from the main text, containing
+%%% commentary on rules, optional rules, useful tables and so on.
+%%% There are two versions, starred and unstarred -- the starred
+%%% version spans all columns of the page, while the unstarred
+%%% version only fills one. Both versions have a mandatory title
+%%% parameter.
+%%% Usage:
+%%%   \begin{sidebox}{title}
+%%%     here is a rundown of stuff.
+%%%   \end{sidebox}
+%%%
+\makeatletter
+%% background colour of the sidebox
+\definecolor{sbbackground}{rgb}{0.9,0.9,0.9}
+%% sidebox width
+\newlength{\sbwidth}
+%% Create placeholder box
+\newsavebox{\@sbbox}%
+%% sidebox title text macro
+\newcommand{\sideboxtitle}[1]{%
+\begin{center}{\large\bfseries #1}\end{center}%
+}
+\DeclareDocumentEnvironment {sidebox} {somo}%
+{
+%% Set width and float type for starred/unstarred version
+\IfBooleanTF{#1}%
+{\setlength{\sbwidth}{0.9\textwidth}
+\def\sbfloatname{table*}
+}%
+{\setlength{\sbwidth}{0.95\columnwidth}
+\def\sbfloatname{table}
+}%
+\begin{lrbox}{\@sbbox}%
+\begin{minipage}{\sbwidth}%
+\sideboxtitle{#3}%
+%
+}% the content gets saved in the \@sbbox box
+{\end{minipage}%
+\end{lrbox}%
+% put the contents of the savebox in a table float
+\begin{\sbfloatname}[!htb]
+\centering
+\colorbox{sbbackground}{\usebox{\@sbbox}}
+\IfValueT{#2}{\caption{#2}}
+\IfValueT{#4}{\label{#4}}
+\end{\sbfloatname}%
+}%
+\makeatother
+%% lines, align, overhang, width, caption, title, label
+% \DeclareDocumentEnvironment {halfsidebox} {omom}%omo}%
+\newenvironment{halfsidebox}%
+{%
+\begin{wraptable}{r}[1cm]{4cm}%
+% \begin{lrbox}{\@sbbox}%
+% \begin{minipage}{#4}%
+% \sideboxtitle{#6}%
+%
+% }% the content gets saved in the \@sbbox box
+% {\end{minipage}%
+% \end{lrbox}%
+% put the contents of the savebox in a table float
+% % TODO fix this bullshit
+% \IfValueTF{#1}%
+% {%
+% %   \typeout{DLM\ Lines\ specified}%
+%   \IfValueTF{#3}%
+%   {%
+% %   \typeout{DLM\ overhang\ specified}%
+%   \begin{wraptable}[#1]{#2}[#3]{#4}
+%   }{%
+% %   \typeout{DLM\ overhang\ not\ specified}%
+%   \begin{wraptable}[#1]{#2}{#4}
+%   }
+% }{%
+% %   \typeout{DLM\ Lines\ not\ specified}%
+%   \IfValueTF{#3}%
+%   {%
+% %   \typeout{DLM\ overhang\ specified}%
+%   \begin{wraptable}{#2}[#3]{#4}
+%   }{%
+% %   \typeout{DLM~overhang~not~specified~2\{#2\}~4\{#4\}}%
+%   \begin{wraptable}{#2}{#4}
+%   }
+% }%
+% \begin{wraptable}\IfValueT{#1}{[#1]}{#2}\IfValueT{#3}{[#3]}{#4}
+% \sideboxtitle{#6}%
+}{%
+% \centering
+% \colorbox{sbbackground}{\usebox{\@sbbox}}
+% \IfValueT{#5}{\caption{#5}}
+% \IfValueT{#7}{\label{#7}}
+\end{wraptable}%
+}%
+%
+%% The better way?
+% \floatstyle{boxed}
+% \newfloat{sideboxfloat}{thb}{lsb}[chapter]
+% \makeatletter
+% \newcommand\fs@shaded{
+% \makeatother
+%
+
+%%% TODO: decide on section break format
+%%% In some cases it seems like a good idea to start a new page
+%%% or column at every section break. We're currently undecided, so
+%%% we can easily change that here every time we change our mind.
+%% To be inserted before and after each section break
+\newcommand{\presection}{\newpage}
+% \newcommand{\presection}{}
+\newcommand{\postsection}{}
+%% redefine the \section command slightly to use the above
+\let\TMPsection\section\relax % placeholder
+%
+\DeclareDocumentCommand \section {om} {%
+\presection%
+\IfValueTF{#1}{\TMPsection[#1]{#2}}{\TMPsection{#2}}%
+\postsection}
+%% To be inserted before and after each subsection break
+\newcommand{\presubsection}{}
+\newcommand{\postsubsection}{}
+%% redefine the \subsection command slightly to use the above
+\let\TMPsubsection\subsection\relax % placeholder
+%
+\DeclareDocumentCommand \subsection {om} {%
+\presubsection%
+\IfValueTF{#1}{\TMPsubsection[#1]{#2}}{\TMPsubsection{#2}}%
+\postsubsection}
+%
+
+%%% HACK: suppress some over-eager LaTeX warnings
+\hfuzz = 1.75pt
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Game terms
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Some game terms get laid out specially. We might want all skill
+%%% names to be italicized, or for counter names to be written in
+%%% small caps. Setting these once here ensures uniformity throughout
+%%% the document.
+
+%% Markers: laid out in small caps:
+\newcommand{\marker}[1]{{\scshape #1}}
+\newcommand{\SPOTTED}{\marker{spotted}}
+\newcommand{\OOC}{\marker{ooc}}
+\newcommand{\LOVERS}{\marker{LOVERS}}
+\newcommand{\JUSTFRIENDS}{\marker{JUST FRIENDS}}
+%
+%% Skills: italicized, with optional modifier in brackets
+\newcommand{\skill}[2][]{{\itshape #2\ifthenelse{\equal{#1}{}}{}{~[#1]}}}
+%
+%% Stunts: italicized
+\newcommand{\stunt}[1]{{\itshape #1}}
+%
+%% Aspects: sans-serif, in brackets
+\newcommand{\aspect}[1]{[{\sffamily #1}]}
+%
+%% Stress track names: bold sans-serif
+\newcommand{\stress}[1]{{\sffamily\bfseries #1}}
+% personal stress
+\newcommand{\Health}{\stress{Health}}
+\newcommand{\Composure}{\stress{Composure}}
+\newcommand{\Wealth}{\stress{Wealth}}
+% ship stress
+\newcommand{\Data}{\stress{Data}}
+\newcommand{\Frame}{\stress{Frame}}
+\newcommand{\Heat}{\stress{Heat}}
+% platoon stress
+\newcommand{\Morale}{\stress{Morale}}
+%
+%% Statistics, for equipment: sans-serif
+\newcommand{\stat}[1]{{\sffamily#1}}
+\newcommand{\Vshift}{\skill{V-shift}}
+%
+%% miscellaneous keywords: bold
+\newcommand{\keyword}[1]{{\bfseries#1}}
+\newcommand{\Aspect}{\keyword{Aspect}}
+\newcommand{\Aspects}{\keyword{Aspects}}
+\newcommand{\Compel}{\keyword{Compel}}
+\newcommand{\Compels}{\keyword{Compels}}
+\newcommand{\Consequence}{\keyword{Consequence}}
+\newcommand{\Consequences}{\keyword{Consequences}}
+\newcommand{\Skill}{\keyword{Skill}}
+\newcommand{\Skills}{\keyword{Skills}}
+\newcommand{\Stunt}{\keyword{Stunt}}
+\newcommand{\Stunts}{\keyword{Stunts}}
+\newcommand{\TakenOut}{\keyword{Taken Out}}
+%
+%% ``4dF'': typeset in monospace
+\newcommand{\dF}{\texttt{4dF}}
+\newcommand{\dplus}[1]{\dF~+~#1}
+\newcommand{\dplusskill}{\dplus{Skill}}
+%
+
+% If we need to fix any hyphenation:
+\input{\INCDIR/hyphenation}
+%
+
