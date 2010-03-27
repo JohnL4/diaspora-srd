@@ -1,0 +1,47 @@
+\begin{sidebox}*{Fudge dice}
+% \begin{sidebox}[Dice probability distributions]{Fudge dice}[tab:fudge-dice]
+\index{dice!fudge dice}
+\centering
+\hspace*{\fill}
+\begin{tabular}{p{0.45\columnwidth}p{0.45\columnwidth}r}
+\multicolumn{2}{p{0.95\columnwidth}}{
+Almost every roll in \emph{Diaspora} is \dF: a single roll of four Fudge dice, yielding a range from -4 to +4. A Fudge die is a d6, with two faces marked -, two marked +, and two blank. You add up the +s, subtract the -s, and you have a total.
+The resultant probability curve is the same as rolling \texttt{4d3-8}, so you could use ordinary \texttt{d6}s and treat 1--2 as -, 3--4 as blank, and 5--6 as +.
+} \\
+\index{dice!alternate systems}
+{\medskip\large\bfseries Option: alternate dice systems}
+%
+% The system will work with a different probability curve by using one of the following die mechanics:
+\begin{description}
+\item [\texttt{d6-d6}, $\pm5$]
+Roll two different-coloured six-sided dice and subtract one from the other. You can establish whatever convention you like for which die is which (such as subtracting dark from light, or red from black), as long as you are consistent.
+
+\item [\texttt{d6-d6}, $\pm4$]
+As above, but treat $\pm5$ as 0. This has the same numeric range as \dF, but with a better chance of an extreme result.
+\end{description}
+&
+\flushright
+\begin{tabular}{r@{}lr@{/}lr@{.}lr@{/}lr@{.}lr@{/}lr@{.}l}
+\multicolumn{2}{c}{}
+{}	& \multicolumn{4}{c}{\dF}
+{}	& \multicolumn{4}{c}{\texttt{d6-d6}, $\pm4$}
+{}	& \multicolumn{4}{c}{\texttt{d6-d6}, $\pm5$} \\
+\toprule
+\multicolumn{2}{c}{roll}
+{}	& \multicolumn{2}{c}{odds} & \multicolumn{2}{c}{\%}
+{}	& \multicolumn{2}{c}{odds} & \multicolumn{2}{c}{\%}
+{}	& \multicolumn{2}{c}{odds} & \multicolumn{2}{c}{\%} \\
+\midrule
+$\pm$&5	& \multicolumn{8}{c}{}		&  1&36	&  2&77 \\
+$\pm$&4	&  1&81	&  1&24	&  2&36	&  5&55	&  2&36	&  5&55 \\
+$\pm$&3	&  4&81	&  4&95	&  3&36	&  8&3	&  3&36	&  8&3 \\
+$\pm$&2	& 10&81	& 12&35	&  4&36	& 11&1	&  4&36	& 11&1 \\
+$\pm$&1	& 16&81	& 19&75	&  5&36	& 13&88	&  5&36	& 13&88 \\
+& 0	& 19&81	& 23&46	&  8&36	& 22&22	&  6&36	& 16&66 \\
+\bottomrule
+\end{tabular}
+\end{tabular}
+\hspace*{\fill}
+
+% \label{tab:4df-in-statistics}
+\end{sidebox}

@@ -1,0 +1,16 @@
+\section{Construction Sequence}
+\label{sec:construction-sequence}
+
+You have already created some number of Worlds, so now we're going to determine how they are connected. The Caller will draw a line of Systems, using the initial letter of each system name to identify it.
+
+For each system, the owning player will roll four fudge dice.
+
+\begin{itemize}
+\item On a \emph{negative} result, connect the system to the next neighbour in the line.
+\item On a \emph{zero} result, connect the system to the next neighbour in the line as above, but also, if a system further down the list has no connections, connect to that neighbour.
+\item On a \emph{positive} result, do all that you do for a zero result and if another system further down the list has no connections, also connect to that neighbour.
+\end{itemize}
+
+Continue for each system until all systems are connected. The second to last system never needs a roll --- it will always connect only to its next neighbour.
+
+That's your cluster! It will have natural hubs and relationships between systems with positive and negative resources. Each world is connected by one to five links to other systems. Next we will discover which worlds can exploit these links and which will have to pay to engage in interstellar trade.
