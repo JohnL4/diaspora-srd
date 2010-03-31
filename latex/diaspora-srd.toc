@@ -1,5 +1,5 @@
 \contentsline {chapter}{Contents}{ii}{section*.1}
-\contentsline {chapter}{List of Tables}{iii}{section*.2}
+\contentsline {chapter}{List of Tables}{iv}{section*.2}
 \contentsline {chapter}{\chapternumberline {1}Playing with FATE}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Players get the Power}{2}{section.1.1}
 \contentsline {subsection}{Abstraction}{3}{section*.3}
@@ -17,8 +17,134 @@
 \contentsline {chapter}{\chapternumberline {2}Clusters}{9}{chapter.2}
 \contentsline {section}{\numberline {2.1}Systems}{9}{section.2.1}
 \contentsline {section}{\numberline {2.2}Generation}{10}{section.2.2}
-\contentsline {section}{\numberline {2.3}Linking Systems}{12}{section.2.3}
+\contentsline {section}{\numberline {2.3}Linking Systems}{11}{section.2.3}
 \contentsline {section}{\numberline {2.4}Construction Sequence}{12}{section.2.4}
-\contentsline {section}{\numberline {2.5}System Attributes}{13}{section.2.5}
-\contentsline {chapter}{OPEN GAME LICENSE Version 1.0a}{15}{chapter*.12}
-\contentsline {chapter}{Index}{19}{section*.13}
+\contentsline {section}{\numberline {2.5}System Attributes}{12}{section.2.5}
+\contentsline {chapter}{\chapternumberline {3}Characters}{13}{chapter.3}
+\contentsline {section}{\numberline {3.1}Creation}{13}{section.3.1}
+\contentsline {section}{\numberline {3.2}Skills}{15}{section.3.2}
+\contentsline {subsection}{Skill Descriptions}{16}{section*.12}
+\contentsline {subsection}{Some special Skills}{23}{section*.13}
+\contentsline {section}{\numberline {3.3}Stress Tracks}{24}{section.3.3}
+\contentsline {subsection}{Consequences}{24}{section*.14}
+\contentsline {subsection}{Taken Out}{24}{section*.15}
+\contentsline {subsection}{Concessions}{25}{section*.16}
+\contentsline {section}{\numberline {3.4}Stunts}{25}{section.3.4}
+\contentsline {subsection}{military-grade}{25}{section*.17}
+\contentsline {subsection}{have a thing}{25}{section*.18}
+\contentsline {subsection}{Skill substitution}{26}{section*.19}
+\contentsline {subsection}{Alter a Track}{26}{section*.20}
+\contentsline {subsection}{Free-form stunts}{26}{section*.21}
+\contentsline {section}{\numberline {3.5}Equipment}{27}{section.3.5}
+\contentsline {subsection}{Automatic Skill Gear}{27}{section*.22}
+\contentsline {chapter}{\chapternumberline {4}Play}{29}{chapter.4}
+\contentsline {section}{\numberline {4.1}The Refresh}{29}{section.4.1}
+\contentsline {subsection}{Fate Points}{29}{section*.23}
+\contentsline {subsection}{Experience}{29}{section*.24}
+\contentsline {subsection}{Stress Track Recovery}{30}{section*.25}
+\contentsline {subsection}{Removing Consequences}{30}{section*.26}
+\contentsline {section}{\numberline {4.2}Opposition}{31}{section.4.2}
+\contentsline {subsection}{Non-Player Characters}{31}{section*.27}
+\contentsline {subsection}{Animals}{31}{section*.28}
+\contentsline {subsection}{Mooks}{32}{section*.29}
+\contentsline {section}{\numberline {4.3}Space Travel}{32}{section.4.3}
+\contentsline {subsection}{Slipping between Systems}{33}{section*.30}
+\contentsline {subsection}{Moving within Systems}{33}{section*.31}
+\contentsline {subsubsection}{Resources}{34}{section*.32}
+\contentsline {subsubsection}{Overburn}{35}{section*.33}
+\contentsline {subsubsection}{Extended Range}{35}{section*.34}
+\contentsline {section}{\numberline {4.4}Economics}{36}{section.4.4}
+\contentsline {subsection}{Purchasing an Item}{36}{section*.35}
+\contentsline {subsection}{Debt and Solvency}{37}{section*.36}
+\contentsline {subsubsection}{Recovering Wealth Stress}{37}{section*.37}
+\contentsline {subsubsection}{Recovering Wealth Consequences}{37}{section*.38}
+\contentsline {subsection}{Selling Things}{37}{section*.39}
+\contentsline {subsection}{Maintenance}{38}{section*.40}
+\contentsline {subsubsection}{Optional Modifiers}{39}{section*.41}
+\contentsline {subsubsection}{Long Term Downtime}{39}{section*.42}
+\contentsline {section}{\numberline {4.5}Mini-Games}{40}{section.4.5}
+\contentsline {subsection}{Scale}{40}{section*.43}
+\contentsline {subsection}{Structure}{40}{section*.44}
+\contentsline {subsection}{Mini-Games}{40}{section*.45}
+\contentsline {chapter}{\chapternumberline {5}Personal Combat}{43}{chapter.5}
+\contentsline {section}{\numberline {5.1}The Map}{43}{section.5.1}
+\contentsline {subsection}{Overhead Map}{44}{section*.46}
+\contentsline {subsection}{Cross Sectional Map}{45}{section*.47}
+\contentsline {section}{\numberline {5.2}The Sequence}{46}{section.5.2}
+\contentsline {subsection}{Attack}{46}{section*.48}
+\contentsline {subsubsection}{Composure Attacks}{47}{section*.49}
+\contentsline {subsection}{Move}{47}{section*.50}
+\contentsline {subsection}{Maneuver}{47}{section*.51}
+\contentsline {subsection}{Do Something Else}{48}{section*.52}
+\contentsline {subsubsection}{Seal a Suit}{48}{section*.53}
+\contentsline {subsubsection}{Apply First Aid}{48}{section*.54}
+\contentsline {subsubsection}{Create an Obstruction}{48}{section*.55}
+\contentsline {section}{\numberline {5.3}Damage}{49}{section.5.3}
+\contentsline {subsection}{Taken out}{49}{section*.56}
+\contentsline {subsection}{Healing}{50}{section*.57}
+\contentsline {subsubsection}{Recovering Stress Box Hits}{50}{section*.58}
+\contentsline {subsubsection}{Recovering Consequences}{50}{section*.59}
+\contentsline {subsubsection}{Medics}{50}{section*.60}
+\contentsline {section}{\numberline {5.4}Special Rules}{51}{section.5.4}
+\contentsline {subsection}{First Blood}{51}{section*.61}
+\contentsline {subsection}{Out of Ammo}{51}{section*.62}
+\contentsline {subsection}{Military-Grade and Civilian}{51}{section*.63}
+\contentsline {subsection}{Hostile Environments}{52}{section*.64}
+\contentsline {subsection}{Zero Gravity}{52}{section*.65}
+\contentsline {section}{\numberline {5.5}Wargaming}{53}{section.5.5}
+\contentsline {subsection}{The Map}{53}{section*.66}
+\contentsline {subsection}{The Story}{53}{section*.67}
+\contentsline {subsection}{Characters in Wargaming}{53}{section*.68}
+\contentsline {subsubsection}{Skills}{53}{section*.69}
+\contentsline {subsubsection}{Stress Tracks}{53}{section*.70}
+\contentsline {subsubsection}{Stunts}{54}{section*.71}
+\contentsline {subsubsection}{Aspects}{54}{section*.72}
+\contentsline {section}{\numberline {5.6}Personal Combat Equipment}{54}{section.5.6}
+\contentsline {subsection}{Weapons}{54}{section*.73}
+\contentsline {subsubsection}{Brawling}{56}{section*.74}
+\contentsline {subsubsection}{Close Combat}{56}{section*.75}
+\contentsline {subsubsection}{Slug Throwers}{56}{section*.76}
+\contentsline {subsubsection}{Energy Weapons}{56}{section*.77}
+\contentsline {subsection}{Armour}{56}{section*.78}
+\contentsline {subsubsection}{Armour Aspects}{57}{section*.79}
+\contentsline {chapter}{\chapternumberline {6}Space Combat}{59}{chapter.6}
+\contentsline {section}{\numberline {6.1}The Crew}{60}{section.6.1}
+\contentsline {section}{\numberline {6.2}Spacecraft}{60}{section.6.2}
+\contentsline {section}{\numberline {6.3}The Map}{61}{section.6.3}
+\contentsline {section}{\numberline {6.4}The Sequence}{62}{section.6.4}
+\contentsline {subsection}{Detection}{62}{section*.80}
+\contentsline {subsection}{Position}{63}{section*.81}
+\contentsline {subsection}{Electronic Warfare}{64}{section*.82}
+\contentsline {subsection}{Beam Weapons}{64}{section*.83}
+\contentsline {subsection}{Torpedoes}{65}{section*.84}
+\contentsline {subsection}{Damage Control}{66}{section*.85}
+\contentsline {section}{\numberline {6.5}Damage}{67}{section.6.5}
+\contentsline {subsection}{Recovering Stress Box Hits}{67}{section*.86}
+\contentsline {subsection}{Recovering Consequences}{67}{section*.87}
+\contentsline {section}{\numberline {6.6}Special Maneuvers}{68}{section.6.6}
+\contentsline {subsection}{Formation Flying}{68}{section*.88}
+\contentsline {subsection}{Tethering}{68}{section*.89}
+\contentsline {subsection}{Boarding}{69}{section*.90}
+\contentsline {subsection}{Coupling}{69}{section*.91}
+\contentsline {section}{\numberline {6.7}Wargaming}{70}{section.6.7}
+\contentsline {subsection}{Aspects and Fate Points}{70}{section*.92}
+\contentsline {subsection}{Crew}{70}{section*.93}
+\contentsline {chapter}{\chapternumberline {7}Social Combat}{71}{chapter.7}
+\contentsline {section}{\numberline {7.1}The Map}{72}{section.7.1}
+\contentsline {subsection}{Time}{72}{section*.94}
+\contentsline {subsection}{The Actors}{72}{section*.95}
+\contentsline {subsection}{Victory}{73}{section*.96}
+\contentsline {subsection}{Sample Maps}{73}{section*.97}
+\contentsline {subsubsection}{Party}{73}{section*.98}
+\contentsline {subsubsection}{Seduction}{73}{section*.99}
+\contentsline {subsubsection}{Debate}{74}{section*.100}
+\contentsline {section}{\numberline {7.2}The Sequence}{74}{section.7.2}
+\contentsline {subsection}{Move}{75}{section*.101}
+\contentsline {subsection}{Composure attack}{75}{section*.102}
+\contentsline {subsection}{Obstruct}{76}{section*.103}
+\contentsline {subsection}{Maneuver}{76}{section*.104}
+\contentsline {subsection}{Move Another}{77}{section*.105}
+\contentsline {section}{\numberline {7.3}Damage}{77}{section.7.3}
+\contentsline {subsection}{Recovering Consequences}{77}{section*.106}
+\contentsline {chapter}{OPEN GAME LICENSE Version 1.0a}{79}{chapter*.107}
+\contentsline {chapter}{Index}{83}{section*.108}

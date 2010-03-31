@@ -1,0 +1,27 @@
+\section{The Map}\label{sec:The Map} % \href{sec:id139}
+
+Our map is a piece of ruled paper, number each line from -4 to 4 and place (or draw) ship models on the lines.
+
+Moving a ship between the 3 and 4 bar (or the -3 and -4) costs 2 shifts. Moving a ship from the last bar off the map costs 3 shifts.
+
+Because of the constraining boundaries (escaping the map is escape from combat, or forced removal from combat) we have to see the map as also abstracting relative velocities. That is, we are not collapsing 3-dimensional position information into 1-dimensional (range) position information. Rather we are collapsing everything about the current 4-dimensional space state of an object into a position on the map. Therefore the map should be read thus:
+
+\begin{itemize}
+\item The distance between two vessels is their separation in space. The distance between two vessels does not encode their bearing, heading, or velocity.
+\item The distance between a vessel and the nearest boundary is, roughly, a measure of its vector (both direction and magnitude) away from a hypothetical ship at range bar 0.
+\end{itemize}
+
+When a player determines position, then, he is determining the range between his placements but he is also determining their relative velocities. Placing two ships at the zero line means that not only are they close, but they are not moving relative to the hypothetical observer. More importantly, they are not moving relative to each other.
+
+This need not be true of two ships sharing the -4 line. They may have widely diverging vectors though they are close in space or they may be far apart on parallel vectors. Should they remain in this map location at the end of the next turn, the transition should be read as the vessels have diverged and then re-converged, retaining large differences in velocity vectors. They could be seen as ``braiding'' around each other.
+
+Where it is desired that ships be in close proximity to each other and sharing vectors and at the same time be distant from other vessels, formation and tethering rules may be used to collapse the ship representations.
+
+Placing a ship near the boundary indicates that that vessel is moving rapidly away from the battle.
+
+So when we have a case of three fleeing ships placed near a boundary being pursued by one ship some bars away towards the zero line, we do not just have three ships far away from a pursuer. We have also indicated by map position that the three ships are already moving much more rapidly than the pursuer, and in different directions. This is why an excellent \Vshift\ roll on the part of a pursuer can only allow him to move one vessel: he must now choose between moving one pursued vessel towards him, modeling a change in relative distance and velocity between the two (he has cut off after one vessel) or he can move himself closer to all three but also closer to the edge, indicating that he's trying to maintain distance to all of them but at the same time acknowledging that he now has a massive velocity vector that doesn't necessarily intersect with any of them: by averaging their hypothetical directions he's not actually pursuing any. If he doesn't make the shot it's unlikely that he will be able to change his velocity enough to keep at least one from escaping.
+
+This abstraction denies some level of tactical decision from the players. A player cannot, for example, decide to apply thrust left by noticing his opponent has applied thrust right. But more importantly, a player can't really decide on low level group tactics like ``we'll all fly in different directions.'' Those decisions might well be encoded in a great \skill{Navigation} roll at the outset that lets him position all his vessels near the escape line, but that level of tactical decision-making is actually embodied in the \Skill\ of the character rather than the player. A lousy \skill{Navigation} roll might leave a player with no options at all --- he got outfoxed and found himself in the middle of a bad situation with no relative velocity and with his (smarter) friends moving rapidly away. The player, in a way, decides how to deploy the tactical abilities of his characters.
+
+Collapsing four dimensions of state into one is going to lose some information in the process. But for every board state and state change, there is an interesting and believable story that can be told. Further, the stories that are told are definitive of the genre --- out-matched pursuit, well-matched firefights, and blockade running.
+

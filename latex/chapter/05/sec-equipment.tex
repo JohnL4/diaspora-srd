@@ -1,0 +1,95 @@
+\section{Personal Combat Equipment}
+\label{sec:personal-combat-equipment}
+
+Most equipment needs little more than a list of their statistics, and so at the end of this chapter there will be a table of all the equipment tidily presented in a way that's easy to use during actual play. Each can benefit from a little cluster-specific story, though, so feel free to write that. Give the weapons technical sounding names and military designations. Give the armour manufacturer's names and model numbers. Make them yours.
+
+\input{tables/weapon-stunts}
+
+\subsection{Weapons}
+
+The statistics of weapons are:
+
+\input{tables/weapons-statistics-descriptions}
+
+With the exception of \skill{Brawling} weapons, weapons may have Stunts and Aspects. These are listed in \autoref{tab:personal-weapon-stunts}. Weapons not designated as \stunt{Civilian} can only be employed by characters with the appropriate Military-grade Stunt. That is, non-civilian slug throwers require the \stunt{Military-grade Slug Throwers} Stunt, and so forth.
+
+Some weapons have Aspects. The weapon becomes a new scope of Aspects that can be tagged in addition to the usual ones on friends, foes, and places.
+
+Weapons break down into four categories, each represented by a Skill of the same name:
+% \begin{itemize}
+% \item Brawling
+% \item Close Combat (CC)
+% \item Slug Thrower (ST)
+% \item Energy Weapon (EW)
+% \end{itemize}
+
+\subsubsection{Brawling}
+\label{sec:brawling}
+
+Brawling involves the nitty gritty fighting with fists, found weapons, clubs, and knives. Brawling weapons do not have Aspects or Stunts.
+
+\subsubsection{Close Combat}
+\label{sec:personal-combat-close-combat}
+
+The \skill{Close Combat} Skill covers all melee weapons, all of which are civilian. If a player wishes his character to own such a weapon it should simply be granted. There is no obvious reason to differentiate or restrict. The \skill{Assets} check to acquire a blade anywhere is 1. The Broadsword includes any long two-handed blade, including battle axe. While not a common weapon, where technology and industry have fallen behind, these are the mainstay of the heavy infantry.
+
+Any long stick with a pointy end is a spear. These stats model all pole-arms. Wherever technology has fallen, these cheap and effective weapons will be common. In some cultures spears might also be found as part of a spacecraft's defensive equipment --- a long pointy weapon could be particularly effective in the narrow confines of a ship.
+
+Some \skill{Close Combat} weapons are designed to be thrown. These have the \stunt{Thrown} Stunt and they get to be re-used indefinitely, as with a firearm or laser. They get the \aspect{Out of ammo} Aspect to model this.
+
+\subsubsection{Slug Throwers}
+\label{sec:personal-combat-slug-throwers}
+
+The basic cost for a slug thrower is 3, modified by the difference between the weapon technology and the technology of the system in which it is purchased. Thus a T2 combat rifle requires an \skill{Assets} check of 3 in a T2 system, but 5 in a T0 system and only 1 in a T4 system. \stunt{Civilian} weapons are one level cheaper.
+
+Some slug throwers automatically have certain aspects:
+
+\begin{center}
+\begin{tabular}{lp{0.59\columnwidth}}
+\toprule
+Out of ammo	& automatic on anyone firing a slug thrower. Freely taggable after a Full Auto area of effect attack. \\
+Military-grade	& automatic on any weapon with\-out the \stunt{Civilian} Stunt. \\
+Concealed	& automatic on anyone with a weapon with minimum range 0\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsubsection{Energy Weapons}
+\label{sec:personal-combat-energy-weapons}
+
+\input{tables/armour-stunts}
+
+The basic cost for an energy weapon is 4, modified by the difference between the weapon technology and the technology of the system in which it is purchased. Thus a T3 laser pack requires an \skill{Assets} check of 4 in a T3 system, but 6 in a T1 system and 3 in a T4 system.
+
+Civilian weapons are one level cheaper.
+
+Energy weapons automatically get the Aspect \aspect{Out of juice}, which one might compel to restrict actions in order to conserve energy.
+
+\subsection{Armour}\label{sec:personal-combat-armour}
+
+Armour not designated as \stunt{Civilian} can only be employed by characters with the \emph{Military-grade EVA} Stunt or any Military-grade personal combat Stunt. A referee would be perfectly right to rule by context (say, for example, that chain mail can't be used with \stunt{Military-grade EVA}), but writing those down as rules would just create a ton of uninteresting exceptions.
+
+\rulebox{When in doubt, have everyone agree to be reasonable.}
+
+Armour has three statistics: \stat{Defense}, \stat{Stamina Mod}, and \stat{Agility Mod}.
+
+\begin{description}
+\item [Defense]
+The amount by which an attacker's roll is reduced automatically. It may be modified by the attacking weapon's penetration value.
+\item [Stamina Mod]
+Applies to powered armour only --- the amount by which the wearing character's \skill{Stamina} rolls are modified. Note that the \skill{Stamina} Skill is not modified, only rolls, so the \Health{} stress track is not affected.
+\item [Agility Mod]
+Applies to all armour, positive values implying powered armour. This value modifies all \skill{Agility} rolls made by the wearer. Note that the \skill{Agility} Skill is not modified, only rolls. Thus a character with an untrained \skill{Agility} Skill and powered armour with an \stat{Agility Mod} of +2 would roll \dF{} - 1 (untrained Skill value) + 2 (\stat{Agility Mod}) for any \skill{Agility} checks. Most armour will have a negative \stat{Agility Mod}, representing the awkwardness or discomfort of wearing it.
+\end{description}
+
+Armour has cost 3, modified by the difference between the armour technology and the technology of the location at which it is purchased. Civilian armour is one cost level cheaper.
+
+\subsubsection{Armour Aspects}
+\label{sec:armour-aspects}
+
+\begin{description}
+\item[Very heavy] referees should happily compel this to ruin roads, damage bridges, and get the authorities mad where it refers to high technology armour. For lower technology armour it may merely imply awkwardness, restricted vision, and other encumbrance effects appropriate to the armour being described. It might reasonably be compelled against \skill{Stealth} checks and so forth too.
+\item[Out of juice] powered armour gets the Aspect \aspect{Out of juice}, which one might compel to restrict actions in order to conserve energy.
+\item[Industrial equipment] the armour is intended for civilian industrial use rather than combat.
+\end{description}
+

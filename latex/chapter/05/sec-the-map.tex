@@ -1,0 +1,68 @@
+\section{The Map}
+\label{sec:personal-combat-map}
+
+A combat session should take place on a map laid out in zones. Transition between zones may have some action cost associated with it (doors, etc.) or not, using a mechanism referred to as a border. Range is measured in numbers of zones, and is pretty loose; but generally:
+
+\begin{itemize}
+\item Characters in the same zone are in hand-to-hand combat range. They can punch, grapple, and stab with ease.
+\item Characters in adjacent zones can be poked with sticks with some effort --- a couple of meters distant or so.
+\item Characters five zones apart are at the limit of effective rifle range --- hundreds of meters.
+\end{itemize}
+
+This is deliberately abstract, and involves some deliberate bending of space. Maps for a good Diaspora fight should be kept simple. We like to lay a piece of paper over the playing area and then sketch the map. When a few terrain elements have been laid down, it should become obvious how to divide it into zones and apply zone Aspects and pass values.
+
+Avoid laying out a grid. The zone system rewards non-orthogonal layout. Zones should not only represent strict distances but also represent the relationships between space and ease of travel and view. Wide open spaces can be big, for example, while rooms in a spacecraft or building can be much smaller, becoming zones with their walls as boundaries. A long straight corridor can reasonably be a single zone if it is narrow enough that you couldn't swing a broadsword in it.
+
+Some heuristics for zones inside structures include:
+
+\begin{itemize}
+\item Rooms with doors that close are a zone, no matter how small.
+\item Split big zones up simply because the range is long (if the space is big enough to swing a broadsword).
+\item Overall, try to keep the basic rules for zone ranges: same zone is punching, adjacent zone is poking, two zones away is throwing, three or more is shooting. Four zones is enough to credibly claim you can escape.
+\end{itemize}
+
+Write the Aspects right on the map. If a zone has an Aspect (and this is a great way to model terrain effects), just write the Aspect right on the zone.
+
+Borders can have pass values. Any borders between zones that is especially difficult to cross will have a pass value --- the number of shifts (from a successful move action) needed to pass through the border. Basic doors might have a pass value of 1 or 2. Dogged hatches might have a much higher pass value: perhaps 4 or higher. A pass value may be zero, as in an open room or an automatically opening door.
+
+Borders that have a state change state when the pass value is paid and remain in that state until the pass value is paid again. So a door that someone has already paid to pass through is now in the open state and costs nothing to pass through until someone pays 2 movement successes (shifts) to close it. Some borders may have a state that is not reversible --- for example an obstacle that must be dismantled somehow and cannot easily be put back together --- in which case the border reverts permanently to the new state's pass value (probably zero, but a referee could get creative here). Note then that the pass value is also the cost to change state, even when it is in a state where the effective pass value is zero.
+
+A simple notation for borders is to use a digit representing the pass value. For borders with two states, separate the three (cost to open, cost to pass while open, cost to close) pass values with a slash. A low stone wall might be represented simply with a 2/2/2 or just 2. A dogged hatch might be 4/0/4, and would cost 4 shifts to open at which time its pass value is zero. It would take 4 shifts to then close it again. Punching a hole in a thin bulkhead might be represented 20/4/X --- costs plenty to get through and is never all that easy to crawl through the hole and isn't reversible.
+
+Some pass values:
+
+\begin{description}
+\item[A dogged hatch] (hard to open, stays open, hard to close): 4/0/4
+\item[An automatic door/hatch] (opens at the push of a button and closes automatically): 1/1/1
+\item[A barrier of burning tires] (hard to clear, stays cleared): 8/0/X
+\end{description}
+
+The situation is slightly different for outdoor locations, where too many zones clutter the map.
+
+\rulebox{Outdoors all brawling and close combat weapons have a range of 0} (combatants must be in the same zone).
+
+\subsection{Overhead Map}
+\label{sec:personal-combat-overhead-map}
+
+An overhead map may have several zones. A region that is hard to pass may be split into more zones. Visual cues on a map can be used exactly as a worded Aspect. There may be zones without Aspects. These are areas that don't offer tactical options. The personal combat system presented here is well suited to simple maps.
+
+\subsection{Cross Sectional Map}
+\label{sec:personal-combat-cross-sectional-map}
+
+Spacecraft will typically be organized with small decks stacked along the axis of thrust so that the ship's acceleration provides ``gravity'' for the occupants. This presents a minor problem for running personal combat: the decks are not going to be very big or very interesting, so a familiar overhead deckplan view might not be the best way to proceed.
+
+Another possibility is to display the ship in lateral cross section instead of the usual overhead view and increase the abstraction. In this case (or any case where you want to use a cross section instead of a floorplan --- a fight in an office building, for example) it will be handy to invent a Stunt that makes a whole set of zones (a deck or a storey) behave accordingly. We'll call that set of zones a ``level.''
+
+\begin{description}
+\item[Cluttered]
+a cluttered level is full of things that block line of sight and make movement difficult. It can still be huge (two, three, four, even five zones), but the clutter means that weapons cannot be used beyond range zero.
+\item[Complicated]
+a complicated level is such that it is impossible to acquire line of sight past an adjacent zone. around the shaft, or a floor in a hotel with many rooms. The maximum range characters can engage in is one zones regardless of the number of zones in the level.
+\item[Open]
+an open deck has no interesting obstructions and characters can engage at any range.
+\end{description}
+
+When using a cross sectional map, it is not necessary to represent literally the features of the interior.
+
+As with the overhead map, borders are given numeric values for the number of shifts needed to cross.
+

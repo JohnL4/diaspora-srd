@@ -1,0 +1,155 @@
+\section{The Sequence}\label{sec:The Sequence}
+
+Space combat is played in turns, each of which might represent fifteen to thirty minutes of in-game time --- this too has been largely abstracted. Each turn consists of several phases, and each phase will offer a test --- an opportunity to cross-compel, a roll, and an opportunity to tag and/or invoke \Aspects.
+
+\subsection{Detection}
+\label{sec:Detection}
+
+% \makeatletter
+% \newsavebox{\hbbox}%
+% \begin{lrbox}{\hbbox}
+% \begin{minipage}[c]{3.8cm}
+% \sideboxtitle{Phases}
+% The phases are:
+% \begin{enumerate}
+% \item Detection
+% \item Position
+% \item Electronic warfare
+% \item Beam
+% \item Torpedo
+% \item Damage control
+% \end{enumerate}
+% \end{minipage}
+% \end{lrbox}
+% \begin{wraptable}{r}[\sidebarwidth]{0cm}\end{wraptable}
+% \makeatother
+
+% ~
+
+\begin{wraptable}{r}[\sidebarwidth]{5cm}
+\centering
+% \begin{halfbox}{r}{5cm}{Phases}
+\newsavebox{\hbbox}%
+\begin{lrbox}{\hbbox}
+\begin{minipage}[c]{4.5cm}
+\sideboxtitle{Phases of space combat}
+% The phases are:
+\begin{enumerate}
+\item Detection
+\item Position
+\item Electronic warfare
+\item Beam
+\item Torpedo
+\item Damage control
+\end{enumerate}
+\end{minipage}
+\end{lrbox}
+\colorbox{sbbackground}{\usebox{\hbbox}}
+% \caption{#5}
+% \label{#6}
+% \end{halfbox}
+\end{wraptable}
+
+Before a fight can start, everyone needs to find each other. Position is plotted on a linear scale from -4 to +4 on the map. As always, before any dice are rolled, the caller will ask for compels, at which time players can compel each other to fail to act. Failure to act in this case is represented by an automatic result of -4 (dice are not rolled and \Skills\ are not considered: your final result for your \Navigation\ check is -4).
+
+A \Navigation\ check is rolled by each ship's navigation officer, and all rolls are ranked. Ties are resolved by raw \Navigation\ \Skill. The highest ranked Navigator will place two of the ships to be played on the map anywhere except the two most distant lines (-4 and 4). The next highest rank then places a single ship and this continues until all ships are placed. The lowest ranking Navigator places nothing. The ship which wins the detection round may also decide if there will be a positioning roll in the first turn (only). Once all the ships are placed, the winning ship in this phase decides whether to proceed to phase 1 or directly to phase 2. This allows a ship to attempt escape without engaging in combat immediately on being detected --- going to phase 1 --- or it allows it to use the tactical position from the detection phase for an optimized initial combat round --- going to phase 2.
+
+In the event of a tie between two ships (as might happen when two standard T2 merchant ships meet, with default navigators), if neither ship is willing or able to invest fate points to gain victory, ships are placed randomly, based on a roll of the fate dice (it is only in this circumstance that a ship may begin at the 4 or -4 band).
+
+\subsection{Position}\label{sec:Position} % \href{sec:id143}
+
+As always, before any dice are rolled, the caller will ask for compels, at which time players can compel each other to fail to act. Failure to act in this case is represented by an automatic result of -4 (dice are not rolled and Skills are not considered: your final result for your positioning check is -4).
+
+Spacecraft positions are plotted on a simple linear scale from -4 to +4. Ships begin as they were placed in the detection phase. At the beginning of each round of combat, pilots jockey for position. All pilots roll their ship's V-shift rating limited by their effective Pilot Skill (i.e. if one character is serving both as Navigator and Pilot, then the Pilot's effective Pilot Skill is reduced by one). Note also that this is not simply a modifier to the roll: since V-shift is limited by effective Pilot Skill, this penalty might affect performance for the first turn as well.
+
+In addition, ships may apply burn: by running their drives over rating, they can exchange Heat for an advantage in maneuver, improving the V-shift roll. Any ship may declare that it is applying burn, state the value and add that value to their roll (not to the V-shift rating). They immediately take a hit to their Heat stress track equal to the value of their burn, marking that box and all unmarked boxes below it. If the highest box to be marked is already marked, mark the next higher open box. Before marking the damage to the Heat stress track, the pilot may reduce the detrimental effects through Consequences exactly as mitigating combat damage. The caller may allow negotiation of burn declarations at his preference, though generally a declared burn rating by a ship's player must stand.
+
+Ships may choose not to use their drives in order to bleed heat. Each turn that the V-Shift is not engaged allows the highest filled box in the Heat track to be cleared immediately. This decision results in an automatic -4 final result for the positioning check, which might still be modified by Aspects, but no dice are rolled and no Skill is used. No burn declarations can be made once the caller declares the bidding closed and asks for dice on the table.
+
+Only the highest roller may alter any ship's positions:
+\begin{itemize}
+\item He may move himself the difference between his roll and the lowest roll, or
+\item He may move any ship with a lower roll up to the level of the
+difference between them.
+\end{itemize}
+
+He may not, however, move any vessel more map bands than his own vessel's V-shift rating. Remember, moving a ship between the 3 and 4 bar (or the -3 and -4) costs 2 shifts, and moving a ship from the last bar off the map costs 3 shifts.
+
+If the winning positioning roll is tied, the next highest roll is the winner. This presents some interesting tactical choices for fate point expenditure: sometimes it's advantageous to forfeit your awesome roll so that your ally, who rolled lower, can make use of his better V-shift, for example. You might then use an Aspect to force a tie so that you lose control.
+
+If a ship exceeds the band at -4 or 4, they leave combat, whether forced off by others or maneuvered off by their own pilots. In this fashion a really excellent pilot in a hot ship can cut down the odds by positioning enemy vessels off the map until he faces only one opponent. Similarly, more than two ships chasing a single ship can usually keep the lone opponent on the map through positioning.
+
+\subsection{Electronic Warfare}\label{sec:Electronic Warfare}
+
+As always, before any dice are rolled, the caller will ask for compels, at which time players can compel each other to fail to act. Failure to act in this case is represented by the ship being unable to declare a target.
+
+Before any destructive weapons are used, each ship may conduct electronic warfare, pitting its communications officer against the enemy. If a communications officer has Military-grade Communications, she may pick a target and roll the ship's Electronic Warfare (EW) rating, amplified by her effective Communications Skill (if the communications officer has acted in any of the previous phases, there is a cumulative -1 penalty for each phase she has acted). The defender also makes a roll, of his ship's EW rating, amplified by the communications officer's effective Communications Skill. The rating may be zero, in which case there is there is no crewman staffing the position unless this is done by one of the PCs. Ships may have a Stunt (Firewall) that automatically provides a defense value of 2, and which may not be modified. Subtract the defender's modified roll from the attacker's.
+
+As with any roll, these results can now be modified by tagging or invoking Aspects and paying a fate point to get +2 or re-roll.
+
+Positive values are treated as shifts against the defender.
+
+Negative values are treated as shifts against the attacker.
+
+Whoever has shifts against him will take a Data stress track hit to the ship. Before damage is calculated, the player may apply Consequences to reduce the number of shifts: a mild Consequence reduces the shifts by one, a moderate Consequence reduces the shifts by two, and a severe Consequence reduces the shifts by four. Recall that no entity can have more than three Consequences of any kind and never more than one of each type.
+
+Once the final number of shifts are determined, the corresponding box on the Data stress track is marked and all open boxes below it are also marked. If the highest box to be marked has already been marked, mark the next highest.
+
+Note that only one roll is made for each ship, so in some cases with more than two ships in play, a single roll may defend against multiple attacking rolls as well as conceivably acting as the attacking roll on a declared target. Note also that a good defense against hacking can inflict damage on the attacking Data stress track, even if the defending communications officer does not have Military-grade Communications.
+
+The Electronic Warfare (EW) defense roll is persistent through this phase, but the total may be added to over the course of the phase through the spending of fate points. An outnumbered ship may still mount a reasonable defense.
+
+\subsection{Beam Weapons}\label{sec:Beam Weapons} % \href{sec:id145}
+
+Beam weapons subsume all relatively short range unguided weaponry, so they may be described as lasers of various wavelengths, artillery, rockets, railguns, electromagnetically propelled storms of small projectiles, particle beams, or anything else that suits the setting developed at the table.
+
+As always, before any dice are rolled, the caller will ask for compels, at which time players can compel each other to fail to act. Failure to act in this case is represented by a failure to declare a target in whatever phase the player ship was compelled.
+
+A ship with a Beam Skill can attack at a value from 1 up to the full Beam rating.
+
+All combat rolls, offensive and defensive, are made at the Beam rating amplified by the gunner's Gunnery Skill (that is, the Beam rating is used and increased by one if the Gunnery Skill is higher). If the gunnery officer has acted in any of the previous phases, there is a cumulative -1 penalty to the effective Skill level for each phase he has acted. Defensive rolls are made once for each defensive system but stay on the table --- that defensive roll you made against Beams stands throughout the Beam Weapons phase, complete with any modifications from invoking Aspects, using spin, etc. Defensive rolls are persistent through the phase, so it can be handy to note them on the ship card or use a coloured 12- or 20-sided die set to the result. Sometimes we write them on the map. Offensive Beam rolls are distinct from defensive Beam rolls (from the Torpedo phase) and should be recorded separately.
+
+A roll with no modification is made to oppose all incoming Beam attacks. Ship's may have a Stunt (Vector Randomizer) that changes the base from 0 to 2.
+
+When Beams are fired offensively the attacker must declare what Beam rating he will apply. He may apply any value from 1 to the full Beam rating. Note the Beam value used.
+
+Beams firing at three or more bands range subtract 2 from the roll. Attacks are resolved as they are declared, again leveraging social pressure to determine who goes first: the caller closes the call for targets by announcing a final call, and counting slowly to three (if necessary --- if your caller is fair and fun, he'll leave plenty of time), after which no further targets can be announced.
+
+Subtract the final defender's sum from the attacker's to find the number of shifts. The defender may reduce these by applying one or more Consequences:
+\begin{itemize}
+\item reduce the shifts by one by applying a mild Consequence
+\item reduce the shifts by two by applying a moderate Consequence
+\item reduce the shifts by four by applying a severe Consequence.
+\end{itemize}
+
+Recall that no entity may have more than three Consequences and never more than one of each kind.
+
+\subsection{Torpedoes}\label{sec:Torpedoes} % \href{sec:id146}
+
+As always, before any dice are rolled, the caller will ask for compels, at which time players can compel each other to fail to act. Failure to act in this case is represented by a failure to declare a target in whatever phase the player ship was compelled.
+
+Torpedoes attack at the spacecraft's Torpedo Skill rating.
+
+All combat rolls, offensive and defensive, are made at the Torpedo rating amplified by the gunner's effective Gunnery Skill (that is, the Torpedo rating is used and increased by one if the effective Gunnery rating is higher). If the gunnery officer has acted in any of the previous phases (including the Beam phase), there is a cumulative -1 penalty for each previously active phase. Defensive rolls are made once for each defensive system but stay on the table --- that  defensive roll you made with the Beams stands throughout the Torpedo Phase, complete with any modifications from Aspect invocation, spin, or other sources. As these rolls are persistent through the phase, it can be handy to note them on the ship card or use a coloured 12- or 20-sided die set to the result. Sometimes we write them on the map. Though persistent, defensive rolls are distinct from offensive rolls and should be recorded separately.
+
+A Beam roll is made to oppose all incoming Torpedoes. To do this, the beam position must be staffed. If Beams were fired in the Beam Weapons phase, then the roll may be made as usual, amplified by gunner's effective Gunnery Skill. If Beams were not fired, then there must be a trained crew member available to man the beams in this phase: normal penalties and bonuses apply, but since each crew member may only act once per phase, a ship with a single gunner (as might happen with a skeleton crew) may have to choose between offensive Torpedo fire and defensive Beam fire. Beams so used may also have been fired offensively, and defensive fire may cause damage to the Heat stress track. Ships with no Beam rating or those unwilling to fire Beams defensively, roll with a base of 0 unless they have a Stunt (Point Defense) that changes the base from 0 to 2.
+
+When Beams are fired defensively the attacker must declare what Beam rating he will apply. He may apply any value from 0 to the full Beam rating. Note the Beam value used. If the sum of the offensive Beam used plus the defensive Beam used is greater than the total Beam rating, then the ship takes a hit on the Heat stress track equal to the difference and marks all boxes below as well.
+
+Torpedoes firing at one or zero bands range subtract 2 from the roll. Attacks are resolved as they are declared, again leveraging social pressure to build an initiative order as in the Beam phase. The caller closes the call for targets by announcing a final call, and counting slowly to three, after which no further targets can be announced.
+
+Subtract the final defender's sum from the attacker's to find the number of shifts. The defender may reduce these by applying one or more Consequences:
+\begin{itemize}
+\item reduce the shifts by one by applying a mild Consequence
+\item reduce the shifts by two by applying a moderate Consequence
+\item reduce the shifts by four by applying a severe Consequence.
+\end{itemize}
+
+Recall that no entity may have more than three Consequences and never more than one of each kind.
+
+\subsection{Damage Control}\label{sec:Damage Control} % \href{sec:id147}
+
+Damage control checks may now be made on Frame stress tracks (using one crew member's effective \skill{Engineering} Skill) or Data stress tracks (using one crew member's effective \skill{Computer} Skill). Since each crew may only staff one position per phase, the same individual may not be responsible for both rolls. If the engineer or computer officer has acted in any of the previous phases, there is a cumulative -1 penalty for each previously active phase. The target number for success is the highest box marked on the relevant track. The number of successes indicate the track box that can be erased. Erase it and all unmarked boxes below it.
+
+The Heat stress track cannot be repaired during combat, except by shutting off engines, as described in the positioning phase.
+

@@ -1,0 +1,102 @@
+\section{The Sequence}\label{sec:personal-combat-sequence}
+
+Combat occurs according to a strict sequence of events. In order to run the Sequence, one player should be named the caller (usually the referee, but if one player's character is not physically present, it makes sense for him to call, while the referee controls the opposition). The duty of the caller is to run the Sequence: he ensures that each phase is given sufficient time and that there is a smooth pace as phases proceed. The caller should have the Sequence Summary in front of him during the game.
+
+While objectively it is more appealing to poll characters in order of some Skill (\skill{Alertness} is the usual choice, with ties broken by \skill{Agility}), in practice this does not have a huge impact on play except to slow it down and confuse the order. A more effective solution for actual play is for the caller to select a player by any criteria he likes and then poll players clockwise or counterclockwise around the table.
+
+\rulebox{The caller decides on the order in which players will declare actions in the combat Sequence.}
+
+Combat is organized into turns of non-specific length, but each representing something between twenty seconds and a minute, depending on the actions described. Consequently, it may be assumed that more is happening within each round than is actually being described, and in a given round a guy with a pistol might shoot an opponent, or he may defend against multiple attacks by shooting (but never hitting) in the direction of his attackers.
+
+In combat, each player may only use a given Skill only once per round. You cannot use the same Skill for offense and defense in the same round.
+
+Each player's turn consists of two parts:
+\begin{description}
+\item [a free one-zone move]
+% a ``free'' one-zone move and an action.
+%
+The ``free'' move may constitute eroding a pass value by one.
+
+\item [an action] The action will fall into one of four categories: \emph{attack}, \emph{move}, \emph{maneuver}, or \emph{do something else}.
+\end{description}
+
+\subsection{Attack}\label{sec:personal-combat-attack}
+
+If an attack action is declared, the player will announce their character's action for the round and will interpret it, with the assistance of the caller, in game mechanical terms as a Skill test roll of some kind with appropriate results.
+
+Attacks roll \dF{} + the appropriate Skill and add the weapon's harm value. The Defender rolls \dF{} + an appropriate Skill + any defense conferred by armour. Armour defense is reduced by weapon penetration, though no lower than zero. See the weapon tables to find the harm and penetration values for weapons. See the armour tables for the defense values of armour.
+
+A weapon used inside its minimum range or outside its maximum range applies a modifier of -2 to the roll. \skill{Brawling} and \skill{Close Combat} weapons may not be used outside of the weapon's maximum range unless they have a Stunt that allows it.
+
+Both attack and defense rolls may now be modified by invoked Aspects, tagged Aspects, spin (though only one of each type: see Playing with Fate, \autoref{sec:playing-with-fate}) and any other available modifier.
+
+The difference between the attacker's roll and the defender's roll after all modifications is the number of shifts. If this number is positive, the attack was successful. If zero or negative the attack fails. If the result is -3 or lower, the defender gets spin.
+
+For each successful attack, damage is noted, and mitigated as per the Damage section below. If this is the first time the character has been hit in this session, the damage is to both \Health{} and \Composure{} stress tracks as per the First Blood section below. Free tags resulting from Consequences are immediately available to the next opponent character to announce action (or any following opponent, until the free tag has been tagged).
+
+\index{defensive roll record}
+Leave defensive rolls on the table --- this is your \emph{defensive roll record}. Note the value on a piece of paper or the map if Aspects have been tagged or invoked --- the value left at the table is the roll + Skill + any Aspect-related improvement. If the character is attacked a second or further times, before acting, use the roll on the table whenever the same skill is used for defense. This ``one defensive roll per round'' rule has tactical ramifications. First, if you get a bad defensive roll expect to be ganged up on. Second, if you get a great defensive roll you could generate multiple spin counters.
+
+When it's your turn to act, remove your defensive roll record.
+
+\subsubsection{Composure Attacks}
+
+\index{composure attack}
+A \Composure{} attack is conducted exactly as an attack above, but the damage done is to the \Composure{} stress track only.
+
+Any attack can be made against either \Composure{} or \Health{} tracks. They are made with any weapons Skill. Characters may attempt \Composure{} attacks without using weapons, in which case the character also gains the temporary Aspect, \aspect{Sitting duck}. (A given table may decide that \skill{MG Intimidation} could avoid this result Aspect, and allow \skill{Intimidation} attacks in combat without penalty). Armour affects \Composure{} attacks just as it does \Health{} attacks but only those that use a weapon.
+
+Any attack that would normally cause damage to the \Health{} track can instead be used to damage the \Composure{} track if the attacker so desires and declares before the dice are rolled. The attack is conducted exactly as normal with all modifiers unchanged.
+
+\subsection{Move}\label{sec:personal-combat-move}
+
+Any combat action allows a character to move a single zone. If, however, the player declares his whole action to be a move, he may roll \skill{Agility} (or \skill{MicroG} if in a microgravity environment) against difficulty zero and count shifts. He may use these shifts for movement in addition to his free move of one zone for up to two additional zones.
+
+A character may move no more than three zones in a single turn, including the free move. Excess shifts can be used to erode pass values, though.
+
+Borders with a multiple move cost to pass through (like a closed door or difficult terrain) can be moved through with one turns' expenditure (if it's sufficient) or can be eroded over multiple turns. So, for example, trying to move through a closed door with pass value 2, a player adjacent to it could erode it by 1 and still make a combat action or forfeit his combat action and make a \skill{Agility} roll. At a minimum he will erode the pass value by 1 but he may well generate enough successes to open the door and move through it. Any number of successes may be brought to bear on border obstacles as long as the three zone movement limit is maintained.
+
+\subsection{Maneuver}\label{sec:personal-combat-maneuver}
+
+A player may wish to place an Aspect on a zone, a character, or the scene. This can represent anything from distracting the opponent to changing the environment of the conflict.  Before the maneuver, the player may choose to move his character one zone.
+
+The maneuvering player makes a roll at 4dF + an appropriate Skill (as chosen when narrating) against target zero. If the roll is successful he places a free-taggable Aspect on a person or zone. Maneuver rolls can be modified by invokes, spin, tags, and so forth as any other roll.
+
+Any free tags placed by maneuvers at this time are immediately available to the next character to announce action (or any following character, until the free tag has been tagged).
+
+Aspects that have been placed on a zone may also be used to compel anyone in that zone, just as that character's own Aspects might be used in a compel. Write that Aspect right on the map! The caller should determine whether the Aspect placed is permanent or transient.
+
+\begin{description}
+\item[Permanent Aspects]
+are Aspects that affect the person or terrain directly for the scope of the conflict.
+\item[Transient Aspects]
+are Aspects that derive from the continuous action of an individual. Transient Aspects last only until the placing character acts again, though he may use the Aspect in this last turn of its existence.
+\end{description}
+
+Aspects placed on a character can be removed by the character on his turn. If the Aspect is still free-taggable, he may free-tag it and remove the free-taggability without a roll as his action. If it is not free-taggable, he may remove it with a maneuver against himself at target zero. Success erases the Aspect.
+
+\subsection{Do Something Else}\label{sec:personal-combat-do-something-else}
+
+Players invariably will want to do something that doesn't naturally fall into one of the above three actions. This is fine, and is subject to table consensus and a plausible narrative. A player may want to jury-rig a circuit, by making a \skill{Repair} roll (against a difficulty determined by the referee), or shut off the engines, by making a \skill{Pilot} roll (against a difficulty determined by the referee), or any of a host of other things. Here are some further ideas, with mechanisms to deal with them.
+
+\subsubsection{Seal a Suit}
+
+When a pressure suit has lost integrity (i.e. when the player has received a Consequence from his \Health{} track), that hole needs to be fixed.
+
+When a suit capable of resisting the hostile environment loses integrity, the wearer must make an \skill{EVA} Skill check against difficulty 4 to repair it instead of a combat action. Each turn this check is failed the character sustains a \Composure{} \emph{and} \Health{} track hit on a box equal to the amount the check was missed by (negative shifts). If the player refuses to declare a repair action and instead takes a combat action, he automatically takes four shifts of damage to both \Composure{} and \Health{} tracks. These shifts may of course be mitigated by Consequences.
+
+Some environments may set a different difficulty target (and consequently a different level of automatic damage) to represent lesser danger --- the difficulty of 4 is intended to model a zero pressure environment.
+
+\subsubsection{Apply First Aid}
+
+Someone with the \skill{Medical} Skill may wish to help an ally during combat. The target number for success is the highest box marked on the Health track. The number of shifts indicates the track box (and all marked boxes below it) that are erased. If that track box is not marked the next lower marked box is erased. The assisting character receives the temporary free-taggable Aspect \emph{Sitting Duck} unless the character has \skill[MG]{Medical}.
+
+\subsubsection{Create an Obstruction}
+
+One way to inhibit movement is to create an obstruction, which applies a pass value to the border between two zones. The precise nature of the barrier, and its duration (whether it needs to be maintained or whether it is permanent) depends entirely upon the narrative offered by the player, and is subject to table approval.
+
+The player declares a target zone boundary and declares a Skill to be used, then narrates his attempt. He rolls \dplusskill{} against target value 2. Bring all the Aspect invokes, tags, and spin to modify the roll that you would for any other roll.
+
+If any shifts are generated, the player may place a pass value of two on any single border of the zone he has declared as his target (2/2/2). If a pass value already exists on the border, it may be incremented by +1/+1/+1.
+
+As with other combat actions, the decision to do something else may be preceded by a free one-zone move. The player can be compelled to prevent the action; if a compel is accepted the player's action ends. Whatever the result, the process should be narrated once it is completed.
