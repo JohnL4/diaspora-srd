@@ -1,0 +1,51 @@
+
+% two-column multicolumn, centred.
+\newcommand{\mcc}[1]{\multicolumn{2}{c}{#1}}
+\newcommand{\mcl}[1]{\multicolumn{2}{l}{#1}}
+% three-column multicolumn, centred.
+\newcommand{\mccc}[1]{\multicolumn{3}{c}{#1}}
+
+\begin{table*}[ht]
+\begin{center}
+\begin{tabular}{
+c	r@{.}l 		r@{~/~}l		*5{r@{~}l}
+}
+\toprule
+{}	& \mcc{}	& \mcc{}		&
+\multicolumn{2}{b{1.5cm}}{\multirow{2}{1.5cm}{\centering Typical slipknot}} &
+\multicolumn{8}{c}{Earth to:} \\
+\cmidrule{8-15}
+{} & \mcc{}	& \mcc{Range, days}	&
+\mcc{} &
+\mcc{Moon}	& \mcc{Mars}	& \mcc{Pluto}	& \mcc{Oort Cloud} \\
+V-shift & \mcc{Acc (G)}	& normal&extended	& \mcc{5AU} &
+.4&Gm		& .5&AU		& 30&AU		&   1&ly \\
+\midrule
+0	& 0&01		& 130	& 520		&  65&d. &
+34&h.	&  17&d.	& 180&d.	&   40&y. \\
+1	& 0&1		& 40	& 160		&  20&d. &
+11&h.	& 5.5&d.	&  56&d.	& 12.5&y. \\
+2	& 0&5		& 18	& 72		&   9&d. &
+5&h.	&  60&h.	&  25&d.	&  5.5&y. \\
+3	& 1&0		& 13	& 52		& 6.5&d. &
+3.5&h.	&  48&h.	&  18&d.	&    4&y. \\
+4	& 1&5		& 10	& 40		&   5&d. &
+3&h.	&  34&h.	&  14&d.	&    3&y. \\
+5	& 2&0		& 9	& 36		& 4.5&d. &
+2.5&h.	&  29&h.	&  12&d.	&  2.8&y. \\
+6	& 3&0		& 8	& 32		&   4&d. &
+2&h.	&  24&h.	&  10&d.	&  2.3&y. \\
+\bottomrule \\
+\end{tabular}
+
+\begin{tabular}{*2{r@{~=~~}l}}
+\mcl{Units of time}	& \mcl{Units of distance} \\
+h.	& Hours		& AU	& Astronomical Unit \\
+d.	& Days		& Gm	& Gigametre, 1 million kilometres \\
+y.	& Years		& ly	& Light-year
+\end{tabular}
+\end{center}
+\caption{Intersystem Travel Times}
+\label{tab:intersystem-travel-times}
+\vfil
+\end{table*}
