@@ -1,0 +1,192 @@
+%%% macros for unit stat blocks
+% parameters:
+% - * indicates we need to output a tikz block
+% - leader (+)
+% - unit name
+% - platoon & unit number
+% - aspect
+% - skill list
+% - stunt list
+% - movement
+% - morale
+%% We assume this is already inside a tikz block
+\DeclareDocumentCommand \infantryblock {S{+}mmmmmmm} {
+  \def\unitskills{#5}
+  \def\unitstunts{#6}
+  \unitblock{Infantry}{#2}{#3}{#4}
+  \unitskillsblock{(-1.25,3.4)}\unitskills
+  \unitstuntsblock{(0.75,3.3)}\unitstunts
+  \unitmovementblock{(1.75,1)}{2}{#7}
+  \unitmoraleblock{}{2}{#8}
+  \unitleaderblock
+}
+\DeclareDocumentCommand \artilleryblock {S{+}mmmmmmm} {
+  \def\unitskills{#5}
+  \def\unitstunts{#6}
+  \unitblock{Artillery}{#2}{#3}{#4}
+  \unitskillsblock{(-1.25,3.4)}{\unitskills}
+  \unitstuntsblock{(0.75,3.3)}{\unitstunts}
+%   \unitmovementblock{(1.75,1)}#7
+  \unitmoraleblock{}{2}{#8}
+  \unitleaderblock
+}
+\DeclareDocumentCommand \armourblock {S{+}mmmmmmm} {
+  \def\unitskills{#5}
+  \def\unitstunts{#6}
+  \unitblock{Armour}{#2}{#3}{#4}
+  \unitskillsblock{(-1.25,3.4)}{\unitskills}
+  \unitstuntsblock{(0.75,3.3)}{\unitstunts}
+  \unitmovementblock{(-0.4,1)}{4}#7
+  \unitmoraleblock{}{1}{#8}
+  \unitleaderblock
+}
+\DeclareDocumentCommand \aircraftblock {S{+}mmmmmmm} {
+  \def\unitskills{#5}
+  \def\unitstunts{#6}
+  \unitblock{Aircraft}{#2}{#3}{#4}
+  \unitskillsblock{(-1.25,3.4)}{\unitskills}
+  \unitstuntsblock{(0.75,3.3)}{\unitstunts}
+%   \unitmovementblock{(-0.4,1)}{4}#7
+  \unitmoraleblock{}{1}{#8}
+}
+\DeclareDocumentCommand \unitblock {mmmm} {
+  \def\unittype{#1}
+  \def\unitname{#2}
+  \def\unitnum{#3}
+  \def\unitaspect{#4}
+  \unitblockborder
+  \unitheaderblock{\unittype}{\unitname}{\unitnum}{\unitaspect}
+}
+\def\unitblockborder{
+  \draw [rounded corners] (-3,0) rectangle +(6,5.5);
+}
+% identifying information
+\def\unitheaderblock#1#2#3#4{
+  \draw [rounded corners=3pt]
+    (0,5.1) [anchor=base east] node {\bfseries #1 Unit:}
+      [anchor=base west] node{\sffamily #2} ++(0,-0.1)--++(2.2,0)
+    (-0.5,4.55) [anchor=base east] node {Platoon/ID:}
+      [anchor=base west] node{\sffamily #3} ++(0,-0.1)--++(1.25,0)
+    (-1.25,4.0) [anchor=base east] node {Aspect:}
+      [anchor=base west] node{\sffamily #4} ++(0,-0.1)--++(4,0)
+    ;
+}
+% Leader checkbox section
+\DeclareDocumentCommand \unitleaderblock {S{+}}{
+  \draw [rounded corners=3pt]
+    (2.95,4.7) [left] node {Leader?}
+      [below left] node {\scriptsize (+2 morale)}
+      ++(-0.1,0.2) rectangle +(-0.5,0.5)
+    ;
+  \IfBooleanT{#1}{
+  \draw [line width=1]
+    (2.4,5.15) -- +(0.1,-0.25) -- +(0.4,0.15)
+    ;
+  }
+}
+% morale boxes
+\def\unitmoraleblock#1#2#3{
+%   \typeout{Morale:~#1~#2~#3}
+  \draw [rounded corners=3pt]
+    (-2.85,0) [above right] node {morale}
+    \foreach \x in {1,...,#2}
+      { ++(0.2,0.5*\x) rectangle +(0.5,0.5) }
+    ;
+  \filldraw [rounded corners=6pt,fill=gray]
+    (-2.65,0) ++(0.0,0.5*#2)
+    \foreach \x in {1,...,#3}
+      { ++(0,0.5*\x) rectangle +(0.5,0.5) }
+    ;
+}
+% skills
+\def\unitskillsblock#1#2{
+  \draw #1
+    [anchor=base west] node {Skills}
+    \foreach \snum/\smod/\snam in #2 {
+      \skillline{\snum}{\smod}{\snam}
+    }
+    ;
+}
+\def\skillline#1#2#3{
+    ++(0,-0.5*#1)
+      [above left] node {#2}
+      [above right] node {\scriptsize #3}
+      +(0,0.1) -- +(1.75,0.1)
+}
+% stunts
+\def\unitstuntsblock#1#2{
+  \draw #1
+    [above right] node {Stunts} ++(0,0.1)
+    \foreach \snum/\smod/\snam in #2 {
+      \stuntline{\snum}{\smod}{\snam}
+    }
+    ;
+}
+\def\stuntline#1#2#3{
+    ++(0,-0.5*#1)
+      [above right] node {\scriptsize #2}
+      +(0,0.1) -- +(2.0,0.1) node [above] {\scriptsize #3}
+}
+% movement
+\def\unitmovementblock#1#2#3{
+  \draw #1
+    [above] node {Movement}
+    +(0,-0.85) node {\scriptsize base #2}
+    ++(-0.75,0)rectangle +(1.5,-0.75)
+    ;
+}
+
+%%% list processing
+%%% from http://maraist.org/comma-separated-lists-in-latex_08-2009/
+
+% kill a single token: match it (removes it from the stream) and
+% immediately do nothing with it.
+% \def\@swallow#1{}
+% %
+% \def\forlist#1#2#3{%
+% %   \typeout{DLM:~ forlist~ args~ `#1'~ `#2'~ `#3'}
+%   \@NullTest@forlist{#1}{#2}#3\@end@forlist}
+% %
+% \def\@NullTest@forlist#1#2{%
+%   \@ifnextchar\@end@forlist%
+%     {#1\@swallow}%
+%     {\@prime@forlist{#1}{#2}}}
+% %
+% \def\@prime@forlist#1#2#3\@end@forlist{%
+%   \@test@forlist{#1}{#2}#3,\@end@forlist}
+% %
+% \def\@test@forlist#1#2{%
+%   \@ifnextchar\@end@forlist%
+%       {#1\@swallow}%
+%       {\@more@forlist{#1}{#2}}}
+% %
+% \def\@more@forlist#1#2#3,#4\@end@forlist{%
+%   #2{#3}{\@test@forlist{#1}{#2}#4\@end@forlist}}
+
+%%% Another approach
+\def\TERMINATOR{LISTTERMINATORSTRING}
+\def\SkillList(#1)(#2){\xSkillList#1,LISTTERMINATORSTRING, }
+\def\xSkillList#1,{\def\TMPlist{#1}%
+%   \typeout{item: \TMPlist}
+  \ifx\TMPlist\TERMINATOR\SkillListItem{#1}
+  \else\SkillListItem{#1}%
+    \expandafter\xSkillList
+  \fi}
+\def\SkillListItem#1{ %skill: #1 ~}
+  \draw ++(0,-0.5) [above right] node {\scriptsize #1} ;
+  }
+%%%
+
+%%% HACK approach
+\DeclareDocumentCommand \HACKSkillList {mmmmmmm} {
+  \typeout{HACKSkillList: #1 . #2 . #3 . #4 . #5 . #6 . #7 }
+  \draw #1
+%     ++(0,-0.5) [above right] node {\scriptsize #1}
+    ++(0,-0.5) [above right] node {\scriptsize #2}
+    ++(0,-0.5) [above right] node {\scriptsize #3}
+    ++(0,-0.5) [above right] node {\scriptsize #4}
+    ++(0,-0.5) [above right] node {\scriptsize #5}
+    ++(0,-0.5) [above right] node {\scriptsize #6}
+    ++(0,-0.5) [above right] node {\scriptsize #7}
+  ;
+}

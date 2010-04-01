@@ -1,0 +1,51 @@
+\input{units/lib-unit-blocks}
+\begin{sidebox}{Typical T-1 units}
+\centering
+\begin{tikzpicture}[scale=0.75]
+\tikzstyle{every node}=[transform shape]
+\begin{scope}
+\infantryblock%
+  {Marines}% name
+  {B--1}% number
+  {they'll never see us comin'}% aspect
+  {1/+3/Camouflage,2/+2/Direct Fire,3/+2/Observation,4/+1/Armour,5/+1/Hand-to-hand,6/+1/Command}% skills
+  {1/Special Forces/T-1,2/{}/T-2,3/{}/T-3,4/{}/T-4}% stunts
+  {}% move
+  {4}% morale
+\end{scope}
+\begin{scope}[yshift=-6cm]
+\armourblock%
+  {Light Tanks}% name
+  {B--2}% number
+  {Outfitted for rough terrain}% aspect
+  {1/+4/Armour,2/+3/Direct Fire,3/+2/Movement,4/+1/Anti-Air}% skills
+  {1/Light/free,2/{}/T-1,3/{}/T-2,4/{}/T-3,5/{}/T-4}% stunts
+  {2}% move
+  {4}% morale
+\end{scope}
+\begin{scope}[xshift=6cm,yshift=0cm]
+\artilleryblock%
+  {Mortar Team}% name
+  {B--3}% number
+  {Pin-point accuracy}% aspect
+  {1/+3/Indirect Fire,2/+2/Camouflage,3/+1/Movement}% skills
+  {1/Zone Effects/free,2/{}/T-1,3/{}/T-2,4/{}/T-3,5/{}/T-4}% stunts
+  {2}% move
+  {4}% morale
+\end{scope}
+\begin{scope}[xshift=6cm,yshift=-6cm]
+\aircraftblock%
+  {Bomber Squad}% name
+  {B--4}% number
+  {Smart-bomb payload}% aspect
+  {1/+4/Direct Fire,2/+3/Observation,3/+2/Anti-air,4/+1/Movement}% skills
+  {1/Long Range/free,2/{}/T-1,3/{}/T-2,4/{}/T-3,5/{}/T-4}% stunts
+  {2}% move
+  {4}% morale
+\end{scope}
+\end{tikzpicture}
+
+% \forlist{\EmptySkill}{\SkillLineNode}{one,two,three}
+%   \SkillList(one,two,three)
+
+\end{sidebox}
