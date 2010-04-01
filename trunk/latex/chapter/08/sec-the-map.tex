@@ -1,0 +1,87 @@
+\section{The Map}\label{sec:platoon-combat-map}
+
+The map is constructed simliar to the maps described in the section on Personal Combat (\autoref{sec:personal-combat}), with the following major differences:
+
+\begin{itemize}
+\item
+There are many more zones: you want at least a zone per unit, so a platoon engagement might have 10 or more zones.
+
+\item
+A regular grid is less effective than irregular shaped zones reflecting the contours of the landscape. Irregular shapes allow access to a greater number of neighbouring zones.
+
+\item
+Each zone has a center mark and an altitude, for determination of line-of-sight.
+
+\item
+Difficult terrain (e.g. forest, swamp) is represented with smaller zones; easy terrain (plains, roads) with larger zones.
+
+\item
+A Re-arm track of six boxes exists on the side of the map to manage aircraft availability.
+\end{itemize}
+% \vfil
+
+\input{sidebar/things}
+% \vfil
+
+\subsection{Line of Sight}\label{sec:line-of-sight}
+
+\index{platoon combat!line of sight}
+\index{line of sight!in platoon combat}
+Because we want to empower indirect fire units (artillery), we need ways to block line of sight (LOS). To this end each zone is marked with a center point (which need not be exactly in the center, but close is good), and a number representing its altitude. The default altitude should be zero, with increments up or down by one or two. No need to go crazy. The guidelines are as follows.
+
+\begin{itemize}
+\item
+% \index{platoon combat!line of sight!obstructions}
+If you draw a line between your zone's center mark and your target zone's center mark and that line is obstructed by a zone with a higher altitude than your zone, LOS is blocked. You may only engage this unit with indirect fire.
+
+\item
+If the target zone is lower than yours and you draw a line between your zone's center mark, LOS is blocked when that line is obstructed by a zone with the same or higher altitude than your zone. You may only engage this unit with indirect fire.
+
+\item
+You can always fire into an adjacent zone.
+\end{itemize}
+
+\index{platoon combat!line of sight!terrain}
+Some terrain features block line of sight but not through elevation (a forest or a town, for example). If you want to model these features, give each zone an altitude as normal, but for zones with blocking terrain add another number indicating the effective altitude for tracing LOS though it.
+
+This rule works best if raised terrain (like the hills in the example above) have zone divisions along their ridge lines as this prevents firing across the ridge to terrain below on the opposite side. Each unit may be in only one zone at a time, and a zone may contain any number of units. The system does not represent where within the zone a given unit is located.
+
+% \vfil
+
+\subsection{Zone Aspects}
+\label{sec:platoon-combat-zone-aspects}
+% \vfil
+
+\index{aspects!on zones}
+Zones may have Aspects on them at the start of the session. A terrain icon drawn on the map is an implicit Aspect and may be tagged normally.
+
+\subsection{Pass Values}
+\label{sec:platoon-combat-pass-values}
+
+\index{platoon combat!pass value}
+\index{pass value!in platoon combat}
+While generally mobility is well modeled by the size of the zone and possibly by adding an Aspect, it may be the case that a border has features that intrinsically limit mobility (a low wall, for example). In this case apply a pass value and a direction in which the pass value applies. Pass values are not eroded --- they must be exceeded in order to continue through in the direction they specify. Shifts spent on passing through a border with a pass value do not count against maximum movement.
+
+When working with pass values, always consider whether it is more effective to model the terrain with a simple Aspect. Simply placing the Aspect, ``Raging river!'' on river zones would attract compels that are much more interesting. Also, keep in mind that just making zones small intrinsically impedes movement, providing a third way to model difficult terrain.
+
+Some actions work by placing pass values, allowing the ability to funnel enemy movement in certain directions or into specific zones with finer granularity than placing Aspects provides.
+%%% DLM: sentence fragment from a copy-paste error? This is from the
+%%% SRD, not my mistake:
+%tracing from the unit itself or the ground level), its altitude is 1.
+
+\subsection{Aircraft Re-arm Track}\label{sec:Aircraft Re-arm Track}
+
+If aircraft are used in the scenario, add a re-armament track: six
+boxes with the first labeled ``RE-ARM'' and the last labeled ``LAUNCH!''
+
+\subsection{Artillery Battery Zones}\label{sec:artillery-battery-zones}
+
+Artillery that are represented off map should be placed in a zone on
+an artillery card created and placed at the side of the map. If the
+artillery is capable of operating at range from their leader, the
+artillery card can have multiple zones and one unit placed in each.
+Units on an artillery card can move from zone to zone on the card in
+the same way as they would on the main map, but they cannot move onto
+the main map.
+
+% \vfill
