@@ -1,7 +1,8 @@
-% \begin{tablebox}{Automatic Skill Gear}
-\begin{table*}[htb]
+\iflandscape{\begin{table*}[htb]}{\begin{sidewaystable*}[htb]}
 \centering
-\begin{tabular}{*2{lp{0.65\columnwidth}}}
+\iflandscape
+{\begin{tabular}{*2{lp{0.625\columnwidth}}}}
+{\begin{tabular}{*2{lp{0.325\columnwidth}}}}
 \toprule
 Skill		& Gear &
 Skill		& Gear \\
@@ -33,5 +34,5 @@ EVA		& a pressure suit. \\
 \end{tabular}
 \caption{Automatic Skill Gear}
 \label{tab:automatic-skill-gear}
-\end{table*}
+\iflandscape{\end{table*}}{\end{sidewaystable*}}
 % \end{tablebox}
