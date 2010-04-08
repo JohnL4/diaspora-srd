@@ -11,6 +11,7 @@ When every player has had a chance to act with every platoon under his command, 
 A turn is a set of cycles through the sequence such that every player has had an opportunity to move every platoon under his control.
 
 \vfil
+% \newpage
 
 \subsection{Move}\label{sec:platoon-combat-move}
 
@@ -72,12 +73,14 @@ Roll \skill{Signals} against another unit's \skill{Signals}. For each shift gene
 
 Jamming is not affected by range or line of sight. Targets need not be spotted. Units can have no more than four \OOC{} markers.
 
+\vfil
 \subsection{Unjam}\label{sec:platoon-combat-unjam} % \href{sec:id198}
 
 Roll \skill{Signals} against zero and remove the shifts in \OOC{} counters from yourself. If this unit is a leader unit, it may remove \OOC{} counters from members of its platoon.
 
 Unjamming is not affected by range or line of sight. It may be performed by units not currently in platoon membership.
 
+% \vfil
 \subsection{Maneuver}\label{sec:platoon-combat-maneuver}
 
 Roll any Skill and supply some narration to describe the effect. Subtract range to target zone. Success places an Aspect on a zone. The Aspect is free-taggable once by an allied unit. Use maneuvers to model artillery cratering (\aspect{Cratered}), forward observation (\aspect{Laser designation}), covering fire (\aspect{Keeping our heads down}), and so on. Maneuvers that use \skill{Direct Fire}, \skill{Indirect Fire}, or \skill{Hand-to-Hand} grant \SPOTTED{} markers exactly as attacks of those type.
@@ -92,14 +95,18 @@ Transient Aspects last only until the placing unit acts again, though it may use
 
 The caller determines whether an Aspect is permanent or transient.
 
-\input{sidebar/spotted}
-
+% \clearpage
+% \newpage
+\vfil
 \subsection{Spot}\label{sec:platoon-combat-spot}
 
 Roll \skill{Observation} against \skill{Camouflage} for any artillery that has fired or any other unit in Line of sight. Place a \SPOTTED\ marker on the unit including the number of shifts (or a \SPOTTED\ token for each shift if you're using glass beads or coins or similar). Failure by three or more generates spin for the defender. If the unit already has a \SPOTTED\ marker, increase it by the number of shifts.
 
 Spotting is not affected by range but is affected by line of sight. Units can have no more than four \SPOTTED\ markers.
 
+\input{sidebar/spotted}
+
+\newpage
 \subsection{Cover}\label{sec:platoon-combat-cover}
 
 Roll \skill{Camouflage} against a target value of zero and reduce any \SPOTTED\ markers on the unit by the number of hits achieved. Covering is not affected by range or line of sight. It may be performed by units not currently in platoon membership.

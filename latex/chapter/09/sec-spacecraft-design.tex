@@ -1,0 +1,244 @@
+\section{Spacecraft Design}\label{sec:Spacecraft Design} % \href{sec:id218}
+
+\subsection{Assumptions}\label{sec:Assumptions} % \href{sec:id219}
+
+These are the rules of the Diaspora universe as they pertain to space flight.
+
+\subsubsection{Ship Size is not Interesting}
+
+The proportion of a ship devoted to reaction mass and heat management
+is vast compared to the crew quarters. Further, even basic automation
+can do most of the job of running a ship. Finally, the nature of
+reaction drives makes most variations in ship size inefficient --- there
+is a sweet spot where you want your ship to be and there's not a lot
+of point in making it bigger or smaller. So, we will derive ship size
+as colour (maybe an Aspect!) from the stats of the desired ship rather
+than derive the stats from the desired ship form. Crew sizes, however,
+are pretty static: a dozen people or so make a full compliment, and
+some ships are designed specially to be run by only three or four.
+
+\subsubsection{Maneuver is a Resource}
+
+The basic efficiency of a reaction motor is fixed by technology level and all
+other Aspects of maneuver are based on how much reaction mass you want to blow
+out the back. Consequently V-shift ratings are (relatively) fixed by technology
+level.
+
+\subsubsection{Slipstream Drives are Little}
+
+If they are big then reaction drives make shipping cargo impossible --- you just
+don't have room for cargo, reaction mass, and something else huge. Whatever
+device controls slipstream entry, it does not significantly add to the payload
+mass.
+
+\subsection{Build Points}\label{sec:spacecraft-build-points} % \href{sec:id220}
+
+\rulebox{bp = 5 + (6T)}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{lr}
+\toprule
+Tech & build points \\
+\midrule
+T-2 & -7 \\
+T-1 & -1 \\
+T0 & 5 \\
+T1 & 11 \\
+T2 & 17 \\
+T3 & 23 \\
+T4 & 29 \\
+\bottomrule
+\end{tabular}
+\caption{Spacecraft Build Points}
+\label{tab:spacecraft-build-points}
+\end{table}
+
+
+\subsection{Statistics}\label{sec:Statistics} % \href{sec:id221}
+
+Stats at or below zero indicate a component that cannot be used offensively.
+All stats have a maximum value of technology rating plus two.
+
+All stats start at value zero and can be increase by 1bp/stat point up
+to stat point=T, and by 2bp/stat point up to the cap. Thus, rank cost
+by technology can be found on the following table:
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{*{7}c}
+\toprule
+rank & T-1 & T0 & T1 & T2 & T3 & T4 \\
+\midrule
+1 & 2 & 2 & 1 & 1 & 1 & 1 \\
+2 & ./. & 4 & 3 & 2 & 2 & 2 \\
+3 & ./. & ./. & 5 & 4 & 3 & 3 \\
+4 & ./. & ./. & ./. & 6 & 5 & 4 \\
+5 & ./. & ./. & ./. & ./. & 7 & 6 \\
+6 & ./. & ./. & ./. & ./. & ./. & 8 \\
+\bottomrule
+\end{tabular}
+\caption{Technology Rank Cost}
+\label{tab:technology-rank-cost}
+\end{table}
+
+
+
+The statistics are:
+\begin{description}
+\item[V-shift] influences positioning roll and heat accumulation
+\item[Beam] attacks offensively and defensively against Torpedo attacks,
+possibly accumulating heat
+\item[Torpedo] attacks only offensively, no heat, has the \emph{Out of ammo} Aspect
+\item[EW] attacks offensively if the crew is trained for offensive EW and is
+reflective in that offensive and defensive rolls are compared and the
+loser takes the shifts in damage
+\item[Trade] influences monthly maintenance rolls
+\end{description}
+
+A ship which doesn't invest points in a statistic possesses a default
+value of zero.
+
+\subsection{Stress Tracks}\label{sec:spacecraft-stress-tracks} % \href{sec:id222}
+
+Stress tracks start at three boxes and cost 1bp to increase or give
+back 1bp to decrease except the Heat track, which costs 2bp to
+increase gives back 1bp per decrease.
+\begin{description}
+\item[Hull track] a measure of structural integrity
+\item[Data track] a measure of network and comms integrity
+\item[Heat track] a measure of heat sink capacity
+\end{description}
+
+\subsection{Stunts}\label{sec:spacecraft-stunts} % \href{sec:id223}
+
+\subsubsection{Common Stunts}\label{sec:spacecraft-common-stunts}
+
+\begin{description}
+\item[Skeleton Crew]
+ship can be crewed with a crew the size of the table (2-4 individuals), as
+long as Pilot, and Navigation are represented in the available Skill sets. The
+ship may not have any crew-related Aspects (``Boarding party,'' say). In combat,
+there is no default Skill ability available, and similarly there is no
+opportunity for role-playing scenarios with traitorous crew members aboard.
+1bp.
+\item[Attacks a different track]
+applies to a single weapon system. This weapon system now attacks a track
+other than its usual target track (a microwave cannon that attacks the heat
+track instead of the Frame stress track, an ECM drone missile system that
+attacks the Data stress track instead of the Frame stress track, etc.) 4 bp.
+\item[Attacks an additional track]
+applies to a single weapon system. This weapon system now attacks a track
+other than its usual target track in addition to its usual target track (a
+fusion cannon that attacks the Data stress track and the Frame stress track, a
+thermite missile that attacks the Frame and the Heat track, etc.) 8 bp.  High
+capacity magazine: Torpedo does not get the automatic \emph{Out of ammo} Aspect. 1
+bp.
+\item[Overwatch]
+may fire its Beam defensively against missiles targeting any ship it is
+tethered with, as many times as opportunity arises in the phase. Each counts
+against the sum of beam fire for heat accounting. 2 bp.
+\item[Automated Defense]
+an automated defense system can be installed for any specific offensive roll.
+This gives a rank 2 defense with no offensive capability, even for reflective
+rolls like EW. It is never modified by character Skill in any way. 1bp each.
+\item[Vector randomizer]
+Defense 2 versus Beam
+\item[Firewall]
+Defense 2 versus EW
+\item[Point Defense]
+Defense 2 versus Torpedoes
+\item[Civilian]
+This ship is designed for private ownership. It comes with registration papers
+for all systems on board and is perfectly legal to own and operate without
+special licensing. More importantly its drives come with all regulated safety
+interlockings, restricting its power output and its thrust. Piloting a ship
+that is not Civilian is much trickier and requires Military-grade Pilot. 3bp
+\item[Cheap]
+This ship is constructed from old technology or ill fitted
+parts. It might be a factory second, failing quality control and
+listed for resale in systems with looser restrictions. Cheap ships
+cost 2bp.
+\item[Interface Vehicle]
+carries its own interface vehicle, capable of landing safely on a planet with
+surface gravity equal to ship technology and take off again. 1bp
+\item[Extended range]
+carries vastly more r-mass than is efficient, removing its ability to
+over-burn drives to reduce travel time but increasing its maximum travel
+duration by a factor of 4. Extended range ships are huge and cumbersome and
+cost 2bp.
+\end{description}
+
+\subsubsection{Technology-Restricted Stunts}\label{sec:spacecraft-technology-restricted-stunts}
+\begin{description}
+\item[T2: Slipstream]
+This ship is capable of using slipknots to travel between star systems. 1~bp.
+
+\item[T3: Slipstream]
+This ship is capable of more sophisticated slipstream travel. 1~bp.
+
+\item[T4: Dimensional heat dump]
+This vessel dumps its heat into another dimension. It does not have a \Heat\ track, and cannot take \Consequences\ from a heat-based attack. 4~bp.
+\end{description}
+
+\subsection{Aspects}\label{sec:spacecraft-aspects} % \href{sec:id224}
+
+All ships have five Aspects. Determine the required Aspects and then
+fill the remaining slots with Aspects that suit the ship's purpose and
+history.
+\begin{description}
+\item[Huge]
+if the Trade value is greater than or equal to twice the technology rating,
+the ship is Huge. If the V-shift rating is equal to or greater than twice the
+technology rating, then the ship is Huge (implies large amounts of reaction
+mass).
+\item[Cargo hauler]
+if the Trade value is 3 or more, the designer may choose this Aspect or
+``Passenger liner.''
+\item[Passenger liner]
+if the Trade value is 3 or more, the designer may choose this Aspect or ``Cargo
+hauler.''
+\item[Falling apart]
+if a ship has the Cheap Stunt, then it also gets one Aspect that is largely
+negative, represented by the ``Falling apart'' Aspect. The table should feel free
+to rename the Aspect to reflect the specifics of the ship's cheapness.
+\end{description}
+
+\subsection{Fighters (optional)}\label{sec:spacecraft-fighters} % \href{sec:id225}
+
+Given the use of reaction drives in Diaspora, effective single-pilot
+fighters are technologically implausible. Still, they can be fun, and
+vessels that carry small amounts of reaction mass would be capable of
+extremely high acceleration for a short while.
+
+\subsubsection{Decoys}
+
+One thing fighters are extremely powerful for is decoying enemy ships. Because
+they generally have bery high maneuver drives and commensurably high pilot
+Skills, they represent a great opportunity to drag an injured opponent back to
+the middle of the map where he can't escape (harrying!) or push him off the
+4-line --- decoying him so far and fast away from his target that he can't return
+to the fight. Take advantage of the fact that your opponent probably won't
+target your little fighter when he can concentrate on killing your Corvette.
+
+Fighters are small ships to aid in combat, but which may not enter
+slipstreams. Any spaceship which buys the Stunt ``Carries Fighters''
+(2bp) may reduce its Trade value by 1 for each fighter carried, to a
+minimum of zero: this decrease affects all rolls involving the Trade
+value, as the small fighter occupies space that could be used for
+cargo or other means of economic viability. Fighters may be launched
+in any combat phase that the parent ship chooses not to act when it
+otherwise could do so. If the parent ship chooses the Beam combat
+phase, the Beams may not subsequently be used defensively, however.
+
+All fighters are military vessels, and pilots require Gunnery and
+Military-grade Pilot Skills. Fighters are designed by buying Beam,
+Torpedo, and V-shift values (as per ship design) and all tracks have
+two boxes. They may buy ``High-capacity magazine'' and ``Automated
+defense'' Stunts, but no others. Fighters have one aspect, but no fate
+points, and any fate points spent come from the parent ship (or the
+pilot, if a PC); similarly, any consequences taken are given to the
+parent ship.
+
+At T2 fighters are built with 6 bp; at T3 fighters are built with 8 bp (2+2T).
+
