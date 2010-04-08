@@ -5,12 +5,13 @@ Wealth in Diaspora is a player choice. It's not a reward granted by the referee 
 
 Every item has a \Cost\ attribute, whether it is a spacecraft or a candy bar. Some big items (mainly spacecraft) also require regular maintenance checks. The \Cost\ attribute is an exponential scale that represents the difficulty a character might have in scraping up the funds (whether cash on hand, selling stocks, or acquiring loans) to get the item. And spacecraft require constant upkeep; owning a ship (through a Stunt, and perhaps supported by an Aspect) does not confer the resources needed to maintain it. This is modeled on a required roll each session.
 
-% \vfill
+\vfill
+% \newpage
 
 \input{sidebar/purchasing-spacecraft}
 
 % \vfil
-\newpage
+% \newpage
 
 \subsection{Purchasing an Item}
 \label{sec:Purchasing an Item}
@@ -21,16 +22,23 @@ Purchasing an item is a \Assets\ Skill check against the \Cost\ of the item. Reg
 
 As \Assets\ is, unlike all other \Skills, tied to something fairly concrete, free-tagging multiple \Aspects\ set up by maneuvers simply doesn't work --- or rather it works too well: three characters without a nickel can each perform a maneuver to place a free-taggable \Aspect\ on the situation (or vendor or whatever) and then a character with, say, \Assets\ 5 could tag all three for an extra +6 bonus and buy a star system. Since that's not what we want out of the economic system, \emph{in this case only} free tags may not be stacked. Purchases are a personal affair.
 
-\vfil
+% \vfil
+%% HACK: get rid of a badbox.
+\newpage
+%%
 
-\rulebox{When making purchases, the character whose \Assets\ Skill is being rolled (and whose \Wealth\ track is at risk) may invoke a single \Aspect\ (free-taggable or otherwise), and may receive no other help.}
+% \rulebox{When making purchases, the character whose \Assets\ Skill is being rolled (and whose \Wealth\ track is at risk) may invoke a single \Aspect\ (free-taggable or otherwise), and may receive no other help.}
+
+\rulebox{When making purchases, a character may invoke only one \Aspect.} This must be the character whose \Assets\ \Skill\ is being rolled (and whose \Wealth\ track is at risk), and while the \Aspect\ may be free-taggable or otherwise, the character may receive no other help.
 
 The cost of things is determined by the referee: while the economics of a given system will depend on the overall cluster, \autoref{tab:example-costs} is offered to give approximate price-points.
 
 If an item falls between two \Cost\ points, the higher number is used. Specific prices and currency are dependent on the system or cluster, of course, but each additional \Cost\ point should represent substantially increased expense. For any character with an \Assets\ Skill, a roll for \Cost\ 1 items should only be required if the result is potentially interesting for the narrative: if failure is boring, items should simply be granted.
 
+% \newpage
+
 \subsection{Debt and Solvency}
-\label{sec:Debt and Solvency}
+\label{sec:debt-and-solvency}
 
 \Wealth\ stress track hits don't go away as easily as other stress. The ``combat'' of finance is an ongoing issue and characters are never very far from it. Consequently, recovery requires time explicitly spent recovering finances. It only requires that the downtime exists.
 
@@ -48,6 +56,8 @@ A severe Consequence can be cleared by anyone (including the character) with an 
 
 Note that time spent clearing Wealth stress effects still triggers maintenance checks, except now you aren't running the ship either. If you want a ship with no trade value, you better have a bankroll to fund it.
 
+% \newpage
+
 \subsection{Selling Things}\label{sec:Selling Things}
 
 When you sell something, you clear the checked Wealth stress track boxes up to the Cost of the item, less one (less two if the object is stolen or otherwise compromised).  Selling many small items cannot remove the extremes of financial stress, but can provide ``breathing room'' on the track. Consequences can also be cleared by selling things. In addition to removing stress hits, selling a Cost 4 item will remove a mild Consequence, a Cost 5 item removes a moderate Consequence, and a Cost 6 item a severe Consequence. This assumes there is a plausible buyer, reasonable title to the object is held, etc.
@@ -55,6 +65,8 @@ When you sell something, you clear the checked Wealth stress track boxes up to t
 If a character sells an item that is owned from a Stunt, then all financial effects are cleared, but you lose the Stunt (at the end of the session, a new Stunt is selected, as per the Experience rules; the Stunt selected must reflect the new conditions and the narrative).
 
 No other advantage is conferred from selling something: as the Assets Skill is a character Skill and changes according to the experience rules and in accordance with the player's wishes (and is balanced with other Skills), characters cannot become ``rich'' in any mechanical sense except through juggling Skills during the refresh. The Assets Skill, like all game statistics, are effects and not causes: causes emerge only through narration justifying the effects, as with everything else. This means that when your spacecraft has become a crippling burden, making you a combat liability because you are carrying around so many Consequences, selling it has only one effect: clearing your stress.
+
+% \newpage
 
 \subsection{Maintenance}\label{sec:Maintenance} % \href{sec:id103}
 
@@ -78,9 +90,13 @@ The ship needs to roll it's Trade Skill against a target value of zero, the targ
 \item If the ship was not used for commercial work since the last maintenance check, add 2 (see below)
 \end{itemize}
 
+% \newpage
+
 Only ship Aspects may be used to modify the roll, and they use ship fate points. This assumes the ship is working full-time to maximize legal cargo or passengers, etc., but still allows two periods of three days per month on planets for shore leave (adventure!). It does not imply anything about how much time it takes to ply the space lanes --- presumably the combination of V-shift and Trade value on the ship describe how it makes its money. It does imply that all or most of the flight time is devoted to the ship's commercial purpose. If the ship has spent more than travel time to and from a slipknot doing something other than servicing their commercial purpose, add 2.
 
 Success indicates that the ship remains solvent: crew is paid, fuel is fresh, docking fees and local taxes are paid, minor repairs are made, and a percentage is kept for annual maintenance. This abstract system does not measure any huge profits: it is assumed that running spacecraft is not going to yield huge personal profits. The ongoing use of the ship is, essentially, the reward (again, unless the player chooses to model profits by raising his Assets skill).
+
+% \newpage
 
 Failure on the roll must be mitigated by Consequences on the ship just as combat damage is, but, since there is no ``track'' for this damage, it always gets a Consequence on a failed roll, which is repaired as any other damage Consequence. That Consequence will be mild. If a mild Consequence is already on the vessel, then a moderate Consequence is taken. If a mild and moderate Consequence are already on the vessel then a severe Consequence is taken. If the vessel already has three Consequences, then it is Taken Out: inability to accept a financial Consequence means the ship is repossessed (or at least marked for repossession), or suffers some similar fate.
 
@@ -91,6 +107,8 @@ A failure might also be mitigated by a character's credit check --- the target v
 On a successful Trade roll, crew members may use any shifts to clear their Wealth stress track hits. The crew will have to negotiate who gets to use how many shifts, if that proves an issue. Each shift may be used to remove one hit anywhere on one character's Wealth track, at the decision of the owning player (or as negotiated by the table). Shifts from a Trade roll cannot be used to clear Wealth Consequences.
 
 % ~
+
+% \newpage
 
 \subsubsection{Optional Modifiers} \label{sec:optional-modifiers}
 
@@ -105,6 +123,8 @@ Ships may elect to spend their time speculating, which introduces the potential 
 Further, if a ship has been engaged in some adventure other than the pedestrian trading of cargo from one system or another (or however it is a ship usually earns its keep), that adventure may yield value that can be put towards the maintenance roll, at the discretion of the referee. He should allow some fraction of (part of, all of, or possibly more than) the ship's Trade rating to be rolled for maintenance this period even though no trade as such was accomplished.
 
 Any ship with a Trade value of 2 should be able to stay solvent in the normal course of things. Once one roll is missed, however, the consequences of debt accumulate rapidly which can put huge (fun) pressures on the players.
+
+% \newpage
 
 \subsubsection{Long Term Downtime}\label{sec:long-term-downtime}
 Sometimes player characters are not in contact with their ship for extended periods. In this case, where the characters are not conducting ship's business but are also not using the ship for anything, don't go making a lot of maintenance rolls. Instead assume that the ship has been properly mothballed or leased or is otherwise taking care of itself. Make a single maintenance roll and call it a day. No one wants to roll twelve times in a row when a character with any common sense would have considered the storage and care of his prized possession. Assume the characters are smart and resourceful, especially when it's not fun or interesting to do otherwise.

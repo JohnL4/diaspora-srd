@@ -1,0 +1,80 @@
+\section[Personal Armour Design]{Armour Design}\label{sec:personal-armour-design} % \href{sec:id230}
+
+Armour uses the build point equation $bp = 2T + 9$ (see \autoref{tab:armour-build}).
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{lc}
+\toprule
+Tech	& BP \\
+\midrule
+T-4	& 1 \\
+T-3	& 3 \\
+T-2	& 5 \\
+T-1	& 7 \\
+T0	& 9 \\
+T1	& 11 \\
+T2	& 13 \\
+T3	& 15 \\
+T4	& 17 \\
+\bottomrule
+\end{tabular}
+\caption{Personal armour build points per tech level}
+\label{tab:armour-build}
+\end{table}
+
+\subsection{Statistics}
+\label{sec:personal-armour-statistics}
+
+\begin{table}\centering
+\begin{tabular}{cc}
+\toprule
+BP	& Defense \\
+\midrule
+0 & 0 \\
+1 & 1 \\
+2 & 2 \\
+3 & 3 \\
+5 & 4 \\
+7 & 5 \\
+9 & 6 \\
+13 & 7 \\
+17 & 8 \\
+\bottomrule
+\end{tabular}
+\caption{Armour defense build costs}
+\label{tab:armour-defense-costs}
+\end{table}
+
+\stat{Defense} is subtracted from all attacks on the wearer. The build point cost to increase \stat{Defense} goes up as the stat goes up --- see \autoref{tab:armour-defense-costs}.
+
+\stat{Agility Mod} is added to the wearer's \skill{Agility} Skill rolls. \stat{Agility Mod} starts at the base score of -2, and cannot be increased with build points directly. The \stunt{Flexible} Stunt increases \stat{Agility Mod} one point, and the \stunt{Lightweight} Stunt increases it another. Agility can only be increased above zero with the \stunt{Power Suit} Stunt.
+
+% \subsection[Personal Armour Stunts]{Stunts}
+% \label{sec:personal-armour-stunts}
+\input{tables/armour-stunt-costs}
+
+\subsection[Personal Armour Aspects]{Aspects}
+\label{sec:personal-armour-aspects}
+
+Armour with a \stat{Defense} value that cost more than (4+T) and is not \stunt{Lightweight} gets the \Aspect, \aspect{Very heavy}, which referees should happily compel to ruin roads, damage bridges, and get the authorities mad. It might reasonably be compelled against \skill{Stealth} checks and so forth too.
+
+Armour with the \Stunt\ \stunt{Power Suit} also gets the \Aspect, \aspect{Out of Juice}, which one might compel to restrict actions in order to conserve energy.
+
+Armour with a \stat{Defense} value higher than tech level that has the \Stunt\ \stunt{Civilian} and does not have the Stunt \stunt{Lightweight} also gets the \Aspect\ \aspect{Industrial Equipment}.
+
+\iflandscape{\vfil}{}
+
+\subsection{Cost}
+\label{sec:personal-armour-cost}
+
+The base cost for armour is 2 for Civilian and 3 for non-Civilian.
+Armour with the \stunt{Power Suit} stunt costs 4 regardless of its Civilian
+status.
+
+% Orginal Material
+%
+% You can download a list of armour as part of the \href{http://www.vsca.ca/Diaspora/Diaspora%20tables.pdf}{essential tables}
+% available from the Diaspora Website.
+
+\vfil

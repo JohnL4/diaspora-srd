@@ -5,19 +5,24 @@
 %%% with this file; if not see:
 %%% http://www.perlfoundation.org/artistic_license_2_0
 %%%
+%%% This file was originally converted from HTML to LaTeX with
+%%% Tomasz Wegrzanowski's <maniek@beer.com> gnuhtml2latex program
+%%%
 %%% TODO simplify producing different page formats
 %%%   landscape/portrait ; letterpaper/a4paper
-\documentclass[10pt,twocolumn,landscape,letterpaper]{memoir}
-% \documentclass[10pt,twocolumn,landscape,letterpaper]{rpgrulebook}
-% This file was converted from HTML to LaTeX with
-% Tomasz Wegrzanowski's <maniek@beer.com> gnuhtml2latex program
-% \documentclass[onecolumn]{memoir}
-% \documentclass[twocolumn]{memoir}
-% \documentclass[10pt,twocolumn,letterpaper]{rpgrulebook}
-% \documentclass[10pt,onecolumn,letterpaper]{rpgrulebook}
-% \documentclass[10pt,onecolumn,landscape,letterpaper]{rpgrulebook}
-
+% \documentclass[10pt,twocolumn,landscape,letterpaper]{memoir}
+\documentclass[10pt,letterpaper]{memoir}
 \usepackage{diaspora-srd} % customizations
+
+%%% Font specifications:
+\usepackage[T1]{fontenc}
+% \usepackage[OT2]{fontenc}
+\ifthenelse{\boolean{SANSSERIF}}
+{
+  \usepackage[scaled]{helvet}
+  \renewcommand*\familydefault{\sfdefault}
+}{}
+% \usepackage{cmss}
 
 \title{Diaspora SRD}
 \input{credits}
@@ -35,12 +40,13 @@
 \footnoterule
 % TODO bottom-align this
 % \footnotetext{
-This file version \VERSION
+This file version \LONGVERSION
 
 Diaspora is \copyright~\href{http://www.vsca.ca/Diaspora}{VSCA Publishing}
-% }
+\clearpage
 
 \tableofcontents
+\clearpage
 \listoftables
 \mainmatter
 
@@ -52,7 +58,7 @@ Diaspora is \copyright~\href{http://www.vsca.ca/Diaspora}{VSCA Publishing}
 \input{chapter/06}
 \input{chapter/07}
 \input{chapter/08}
-% \input{chapter/09}
+\input{chapter/09}
 
 \backmatter
 

@@ -5,20 +5,39 @@
 %%% with this file; if not see:
 %%% http://www.perlfoundation.org/artistic_license_2_0
 %%%
-\def\VERSION{0.1.0-landscape}
+\def\VERSION{0.1.1}
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{diaspora-srd}[2010/03/25 Customizations for the Diaspora SRD project, version \VERSION]
 %
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% FLAGS FOR DIFFERENT VERSIONS OF THE DOCUMENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{ifthen}
+\newboolean{LANDSCAPE}
+\setboolean{LANDSCAPE}{false}
+\newboolean{SANSSERIF}
+\setboolean{SANSSERIF}{true}
+\newcommand{\iflandscape}[2]{\ifthenelse{\boolean{LANDSCAPE}}{#1}{#2}}
+\def\LONGVERSION{%
+\VERSION%
+\iflandscape{-ls}{-pt}%
+\ifthenelse{\boolean{SANSSERIF}}{-ss}{-sf}%
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %
 % \RequirePackage{graphicx}[1999/02/16]
 % \RequirePackage{natbib}
 \RequirePackage{booktabs}%[2005/04/14]
+\RequirePackage{colortbl}
+\RequirePackage{datatool}
 % \RequirePackage{float}
 \RequirePackage{multirow}
 % \RequirePackage{textcomp}
+%%% For portrait/landscape compatibility:
+\RequirePackage{rotating}
 \RequirePackage{tikz}
-% \RequirePackage{ifthen}
 \RequirePackage{xcolor}[2007/01/21]
 %%% Option parsing and command definition
 \RequirePackage{xparse}[2008-08-03]
@@ -28,6 +47,12 @@
 %%% save for last:
 \RequirePackage{hyperref}
 %
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% DATABASES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% we load some databases using the datatool package.
+\input{db/armour}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -70,18 +95,21 @@
 %% Syntax: \calloutbox{Title}{Body text}
 \newcommand{\calloutbox}[2]{%
 \sidebar{\scriptsize
-\rule{\CBwidth}{\onelineskip}%
+{\color{niceblue}\rule{\CBwidth}{\onelineskip}}%
 \vspace{-0.9\onelineskip}\\
 \centerline{{\CBtitlestyle#1}}%
 \vspace{0.5\onelineskip}\\
 \CBparstyle #2 \\
-\rule{\CBwidth}{1pt}\\
-\rule[\onelineskip]{\CBwidth}{2.5pt}
+{\color{niceblue}\rule{\CBwidth}{1pt}\\
+\rule[\onelineskip]{\CBwidth}{2.5pt}}
 }%
 }%
 %
 %% convenience shortcut
-\newcommand{\rulebox}[1] { \textbf{Rule:~} \calloutbox{Rule}{#1} #1}%
+\DeclareDocumentCommand \rulebox {om}{
+\textbf{Rule:~} \calloutbox{Rule}{\IfValueTF{#1}{#1}{#2}} #2
+}%
+% \newcommand{\rulebox}[1]{ \textbf{Rule:~} \calloutbox{Rule}{#1} #1}%
 % or possibly, if it's not going to be confused with \rule:
 % \newcommand{\Rule}[1] { \calloutbox{Rule}{#1} \textbf{Rule:} #1}%
 %
@@ -172,7 +200,7 @@
 %%% or column at every section break. We're currently undecided, so
 %%% we can easily change that here every time we change our mind.
 %% To be inserted before and after each section break
-\newcommand{\presection}{\newpage}
+\newcommand{\presection}{\iflandscape{\newpage}{\vfil}}
 % \newcommand{\presection}{}
 \newcommand{\postsection}{}
 %% redefine the \section command slightly to use the above
@@ -251,7 +279,8 @@
   \rotatebox{90}{%
     \resizebox{%
       \heightof{\usebox{\diaspora@chapter}}+\depthof{\usebox{\diaspora@chapter}}}%
-    {!}{\scshape\so\@chapapp}}\quad%
+%     {!}{\scshape\so\@chapapp}}\quad%
+    {!}{\rmfamily\scshape\so\@chapapp}}\quad%DLM
   \raisebox{\depthof{\usebox{\diaspora@chapter}}}{\usebox{\diaspora@chapter}}%
 }
 \newcommand\diaspora@chm[1][4cm]{%
@@ -264,7 +293,8 @@
   \setlength\afterchapskip{20pt}
   \setlength\midchapskip{-40pt}
   \renewcommand\chapnamefont{\normalfont\Large\scshape\raggedleft\so}
-  \renewcommand\chaptitlefont{\normalfont\HUGE\bfseries\scshape\color{niceblue}}
+  \renewcommand\chaptitlefont{\normalfont\HUGE\scshape\color{niceblue}}
+%   \renewcommand\chaptitlefont{\normalfont\rmfamily\HUGE\scshape\color{niceblue}}
   \renewcommand\chapternamenum{}
   \renewcommand\printchaptername{}
   \renewcommand\printchapternum{\null\hfill\diaspora@chm[2.5cm]\par}
@@ -331,7 +361,8 @@
 \newcommand{\Trade}{\stat{Trade}}
 %
 %% miscellaneous keywords: bold
-\newcommand{\keyword}[1]{{\bfseries#1}}
+% \newcommand{\keyword}[1]{{\rmfamily#1}}
+\newcommand{\keyword}[1]{{\bfseries\rmfamily#1}}
 \newcommand{\Aspect}{\keyword{Aspect}}
 \newcommand{\Aspects}{\keyword{Aspects}}
 \newcommand{\Compel}{\keyword{Compel}}
