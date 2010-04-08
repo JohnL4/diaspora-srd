@@ -1,5 +1,82 @@
 \begin{theindex}
 
+  \item aliens, \see{races, non-human}{98}
+  \item aspects
+    \subitem compelling, \hyperpage{5, 6}
+      \subsubitem scope, \hyperpage{6}
+    \subitem free tags, \hyperpage{5}
+    \subitem from maneuvers, \hyperpage{5}
+    \subitem from skill checks, \hyperpage{5}
+    \subitem invoking, \hyperpage{4}, \hyperpage{6}
+    \subitem on campaigns, \hyperpage{5}
+    \subitem on maps, \hyperpage{5}
+    \subitem on scenes, \hyperpage{5}
+    \subitem on spaceships, \hyperpage{5}
+    \subitem on zones, \hyperpage{81}
+    \subitem tagging, \hyperpage{4}
+
+  \indexspace
+
+  \item character creation, \hyperpage{13}
+    \subitem phases, \hyperpage{14}
+  \item cluster, \hyperpage{9}
+  \item command range, \hyperpage{82}
+  \item composure attack, \hyperpage{47}
+  \item consequences, \hyperpage{49}
+
+  \indexspace
+
+  \item declarations, \hyperpage{7}
+  \item defensive roll record, \hyperpage{46}
+  \item dice
+    \subitem alternate systems, \hyperpage{2}
+    \subitem fudge dice, \hyperpage{2}
+
+  \indexspace
+
+  \item line of sight
+    \subitem in platoon combat, \hyperpage{80}
+
+  \indexspace
+
+  \item maneuver, \hyperpage{5}
+    \subitem and free tags, \hyperpage{5}
+
+  \indexspace
+
+  \item OOC, \see{Out Of Communication}{82}
+  \item Out Of Communication (OOC), \hyperpage{82}
+
+  \indexspace
+
+  \item pass value
+    \subitem in platoon combat, \hyperpage{81}
+  \item platoon combat
+    \subitem line of sight, \hyperpage{80}
+      \subsubitem terrain, \hyperpage{81}
+    \subitem pass value, \hyperpage{81}
+  \item psionics, \hyperpage{98}
+
+  \indexspace
+
+  \item races, non-human, \hyperpage{98}
+
+  \indexspace
+
+  \item shifts, \hyperpage{7}
+  \item skills
+    \subitem fixed-difficulty roll, \hyperpage{6}
+    \subitem opposed roll, \hyperpage{7}
+    \subitem shift, \hyperpage{7}
+    \subitem spin, \hyperpage{7}
+    \subitem time, \hyperpage{8}
+  \item slipknot, \hyperpage{9}, \hyperpage{11}
+  \item slipstream, \hyperpage{9}
+  \item spaceships
+    \subitem aspects
+      \subsubitem starting amount, \hyperpage{5}
+    \subitem fate points
+      \subsubitem starting amount, \hyperpage{5}
   \item Spirit of the Century, \hyperpage{1}
 
 \end{theindex}
