@@ -1,50 +1,12 @@
+\iflandscape{}{\newpage}
 \section[Personal Armour Design]{Armour Design}\label{sec:personal-armour-design} % \href{sec:id230}
 
 Armour uses the build point equation $bp = 2T + 9$ (see \autoref{tab:armour-build}).
 
-\begin{table}[ht]
-\centering
-\begin{tabular}{lc}
-\toprule
-Tech	& BP \\
-\midrule
-T-4	& 1 \\
-T-3	& 3 \\
-T-2	& 5 \\
-T-1	& 7 \\
-T0	& 9 \\
-T1	& 11 \\
-T2	& 13 \\
-T3	& 15 \\
-T4	& 17 \\
-\bottomrule
-\end{tabular}
-\caption{Personal armour build points per tech level}
-\label{tab:armour-build}
-\end{table}
+\input{tables/armour-build-points}
 
 \subsection{Statistics}
 \label{sec:personal-armour-statistics}
-
-\begin{table}\centering
-\begin{tabular}{cc}
-\toprule
-BP	& Defense \\
-\midrule
-0 & 0 \\
-1 & 1 \\
-2 & 2 \\
-3 & 3 \\
-5 & 4 \\
-7 & 5 \\
-9 & 6 \\
-13 & 7 \\
-17 & 8 \\
-\bottomrule
-\end{tabular}
-\caption{Armour defense build costs}
-\label{tab:armour-defense-costs}
-\end{table}
 
 \stat{Defense} is subtracted from all attacks on the wearer. The build point cost to increase \stat{Defense} goes up as the stat goes up --- see \autoref{tab:armour-defense-costs}.
 

@@ -5,7 +5,7 @@
 %%% with this file; if not see:
 %%% http://www.perlfoundation.org/artistic_license_2_0
 %%%
-\def\VERSION{0.1.1}
+\def\VERSION{0.1.2}
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{diaspora-srd}[2010/03/25 Customizations for the Diaspora SRD project, version \VERSION]
 %
@@ -200,7 +200,7 @@
 %%% or column at every section break. We're currently undecided, so
 %%% we can easily change that here every time we change our mind.
 %% To be inserted before and after each section break
-\newcommand{\presection}{\iflandscape{\newpage}{\vfil}}
+\newcommand{\presection}{\iflandscape{\newpage}{}}
 % \newcommand{\presection}{}
 \newcommand{\postsection}{}
 %% redefine the \section command slightly to use the above
