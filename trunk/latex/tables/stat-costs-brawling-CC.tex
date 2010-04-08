@@ -1,0 +1,41 @@
+
+\begin{table}[ht]\centering
+% \begin{tabular}{lccl}
+% \toprule
+% Statistic	& Value	& Cost	& Description\\
+% \midrule
+% Range		& 0	& None	& Brawling weapon \\
+% {}		& 1	& None	& Close Combat weapon \\
+% {}		& 0-1	& 1 bp	& Close Combat weapon \\
+% \midrule
+% Penetration	& 0	& None	& Base value \\
+% {}		& +1	& 1 bp	& Per point, maximum 3 \\
+% \midrule
+% Harm		& 0	& None	& Base value \\
+% {}		& +1	& 2bp	& Per point, maximum 2.\\
+% \bottomrule
+% \end{tabular}
+\begin{tabular}{l*4c}
+\toprule
+		 \multicolumn{5}{r}{bp cost for rank:} \\
+Stat		& 0	& 1	& 2	& 3 \\
+\midrule
+Harm		& 0	& 2	& 4	& - \\
+Penetration	& 0	& 1	& 2	& 3 \\
+\midrule
+Range		& 0	& 1	& 0-1	&  \\
+Cost		& 0	& 0	& 1	&  \\
+% Maximum range	& -4	& -3	& -2	& -1	& 0	& 1	& 2 \\
+\bottomrule
+% \multicolumn{8}{p{0.7\columnwidth}}{
+% Maximum range can never be below minimum range.
+% }\\
+\multicolumn{5}{l}{
+No stat can be below zero.
+}
+\end{tabular}
+% \caption{Brawling and Close Combat weapon build costs}
+% \label{tab:brawling-close-combat-weapon-build-costs}
+\caption{BP costs for Brawling and Close Combat statistics}
+\label{tab:brawling-close-combat-statistics}
+\end{table}

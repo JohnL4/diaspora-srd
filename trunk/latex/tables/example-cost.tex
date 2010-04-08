@@ -1,8 +1,12 @@
-\begin{wraptable}{r}[\sidebarwidth]{6.5cm}
+\iflandscape
+{\begin{wraptable}{r}[\sidebarwidth]{6.5cm}}
+{\begin{wraptable}{r}[\sidebarwidth]{6.75cm}}
 % \begin{sidebox}{Example costs}
 % \begin{table}[ht]
 \centering
-\begin{tabular}{cp{0.375\columnwidth}}
+\iflandscape
+{\begin{tabular}{cp{0.375\columnwidth}}}
+{\begin{tabular}{cp{0.4\columnwidth}}}
 \toprule
 Cost	& Example \\
 \midrule 1

@@ -1,0 +1,20 @@
+%%% This should be identical to armour-stunts, plus costs.
+\definecolor{DTLoddrow}{rgb}{0.9,0.9,0.9}
+\begin{table*}[hp]
+\iflandscape
+{\begin{tabular}{p{0.2\textwidth}ccp{0.65\textwidth}}}
+{\begin{tabular}{p{0.15\textwidth}ccp{0.61\textwidth}}}
+\toprule
+Stunt		& BP	& Tech	& Description %
+\DTLforeach{armour-stunts}{%
+\DTLname=name,\DTLbp=bp,\DTLtl=tl,\DTLdesc=desc}%
+{%
+\DTLiffirstrow{\\\midrule}{\\}%
+\DTLifoddrow{\rowcolor{DTLoddrow}}{}%
+\DTLname	& \DTLbp	& \DTLtl	& \DTLdesc %
+}%
+\\\bottomrule
+\end{tabular}
+\caption{Personal armour stunt costs}
+\label{tab:personal-armour-stunt-costs}
+\end{table*}

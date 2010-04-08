@@ -1,7 +1,11 @@
 %%% Table of weapon stunts
-\begin{table*}[hp]
+\iflandscape
+{\begin{table*}[hp]}
+{\begin{sidewaystable*}[hp]}
 \centering
-\begin{tabular}{l lll p{\columnwidth}}\toprule
+\iflandscape
+{\begin{tabular}{l lll p{\columnwidth}}\toprule}
+{\begin{tabular}{l lll p{0.6\columnwidth}}\toprule}
 Stunt		& CC & ST & EW		& Description\\
 \midrule
 Awkward reload	&     & Yes &		&
@@ -40,4 +44,4 @@ This weapon may be thrown, using the \skill{Agility} Skill, at range 1-2. Normal
 \end{tabular}
 \caption{Personal combat weapon stunts}
 \label{tab:personal-weapon-stunts}
-\end{table*}
+\iflandscape{\end{table*}}{\end{sidewaystable*}}

@@ -5,6 +5,7 @@
 % three-column multicolumn, centred.
 \newcommand{\mccc}[1]{\multicolumn{3}{c}{#1}}
 
+\iflandscape{
 \begin{table*}[ht]
 \begin{center}
 \begin{tabular}{
@@ -49,3 +50,48 @@ y.	& Years		& ly	& Light-year
 \label{tab:intersystem-travel-times}
 \vfil
 \end{table*}
+}{
+\begin{table*}[ht]
+\begin{center}
+\begin{tabular}{rr*7r}
+\toprule
+V-shift
+&&	0 &	1 &	2 &	3 &	4 &	5 &	6 \\
+Acceleration & (G)
+&	0.01 &	0.1 &	0.5 &	1.0 &	1.5 &	2.0 &	3.0 \\
+\midrule
+&&				\multicolumn{7}{l}{Range, days}\\
+\midrule
+Normal
+&&	130 &	40 &	18 &	13 &	10 &	9 &	8 \\
+Extended
+&&	520 &	160 &	72 &	52 &	40 &	36 &	32  \\
+\midrule
+Destination &	&	\multicolumn{7}{l}{Travel time} \\
+\midrule
+typical slipknot & 5AU
+&	65 d &	20 d &	9 d &	6.5 d &	5 d &	4.5 d &	4 d \\
+Earth -- Moon & .4Gm
+&	34 h &	11 h &	5 h &	3.5 h &	3 h &	2.5 h &	2 h \\
+Earth -- Mars & .5AU
+&	17 d &	5.5 d &	60 h &	48 h &	34 h &	29 h &	24 h \\
+Earth -- Pluto & 30AU
+&	6 m &	56 d &	25 d &	18 d &	14 d &	12 d &	10 d \\
+Oort Cloud & 1ly
+&	40 y &	12.5 y&	5.5 y &	4 y &	3 y &	2.8 y &	2.3 y \\
+\bottomrule\\
+\end{tabular}
+
+\begin{tabular}{*2{r@{~=~~}l}}
+\mcl{Units of time}	& \mcl{Units of distance} \\
+h.	& Hours		& AU	& Astronomical Unit \\
+d.	& Days		& Gm	& Gigametre, 1 million kilometres \\
+m.	& Months	& ly	& Light-year \\
+y.	& Years
+\end{tabular}
+\end{center}
+\caption{Intersystem Travel Times}
+\label{tab:intersystem-travel-times}
+\vfil
+\end{table*}
+}

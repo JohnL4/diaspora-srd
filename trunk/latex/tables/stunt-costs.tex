@@ -1,0 +1,53 @@
+\iflandscape{\begin{table*}[hp]}{\begin{sidewaystable*}[hp]}
+\centering\small
+\iflandscape
+{\begin{tabular}{p{0.135\textwidth}*3cp{0.51\textwidth}}}
+{\begin{tabular}{p{0.135\textwidth}*3cp{0.6\textwidth}}}
+\toprule
+% {}		& \multicolumn{3}{c}{Cost}	& \\
+Stunt		& Br/CC	& ST	& EW		& Description\\
+\midrule
+Awkward reload	&	& -2	& 	&
+\aspect{Out of ammo} is free-taggable after regular fire and not just AoE fire. \\
+Civilian	&	& 2	& 2	&
+Makes the weapon usabe by those without the associated \stunt{Military-grade} Stunt. \\
+Cheap		& 2	& 2	& 2	&
+Crap weapon. Gets the aspect \aspect{Cheap}. \\
+Dispersed fire	& 	& 	& 1\footnotemark[1]	&
+Can fire as an AoE weapon, applying its offensive roll to each target in a zone. \\
+Explosive	& 1	& 1\footnotemark[1]	& 1\footnotemark[1]	&
+AoE weapon: apply attack roll to each target in a zone, possibly including the firer. \\
+Free Modal	& 1	& 2	& 2	&
+As \stunt{Modal}, but switching modes is a free action. \\
+Full auto	&	& 1\footnotemark[1]	& 	&
+AoE weapon: can apply offensive roll to each target in a zone. Cannot be used in the same zone as the firer. After full auto fire, \aspect{Out of ammo} Aspect is free-taggable. \\
+High capacity	&	& 1	& 1	&
+\aspect{Out of ammo} cannot be free-tagged. Cannot be combined with \stunt{Awkward reload}. \\
+High recoil	& 	& -1	& -1	&
+Can only be fired every other round unless the firer is prone. \\
+Low recoil	&	& 1	& free	&
+Can be fired with no penalty in low gravity. \\
+Modal		& 	& 1	& 1	&
+Build two or more stat blocks with the same bp value, and switch between them as an action. Each new mode reduces the available bp by the cost of this stunt. \\
+Mostly plastic	& 	& 1	& 1	&
+A poor quality weapon, but not so poor that you'd remark on it. \\
+Non-Lethal	& -1	& -1	& -1	&
+Can only be used for \Composure{} attacks. \\
+Stealthy	& 1	& 	& 	&
+Does not look like a weapon outside of combat. \\
+Thrown		& 1	& 	& 	&
+May only be thrown, using \skill{Agility}, with range 1-2. Normal range penalties apply. \aspect{Out of ammo} Aspect may be compelled. Increases base \stat{Cost} by 1. \\
+Transfer Aspect	& 1	& 1	& 1	&
+Has some special feature, modeled by applying an Aspect to the wielder. This Aspect can be tagged in addition to any allowed character Aspects. \\
+Two-handed	& 1	& 	& 	&
+Designed for two-handed use; awkward in the hands of those not sufficiently strong. The wielder may amplify his Skill check with his \skill{Stamina}. \\
+Un\-de\-tect\-able	& 	& 1	& 1	&
+Skill checks to detect this weapon are at -2. \\
+Versatile	& 1	& 	& 	&
+May be thrown, using \skill{Agility}, at range 1-2. Range penalties apply. The weapon may only be re-used if the character spends an action retrieving it from the target zone. \\
+\bottomrule
+\multicolumn{5}{p{0.9\textwidth}}{\footnotesize \footnotemark[1] Cannot also have \stunt{Civilian}.}
+\end{tabular}
+\caption{Weapon build point stunt costs}
+\label{tab:weapon-stunt-costs}
+\iflandscape{\end{table*}}{\end{sidewaystable*}}
