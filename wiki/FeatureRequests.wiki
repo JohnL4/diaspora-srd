@@ -1,0 +1,13 @@
+#summary Corrections and feature requests
+#labels Phase-Requirements
+
+= Introduction =
+
+Below are feature requests, and corrections suggested.
+
+
+= Requests =
+
+||                 || *requested by*                                      || *date*     || *status* || *target* ||
+|| sans serif font || [http://rpg.geekdo.com/user/oliof Harald Wagener]   || 2010-04-05 || done     || 0.1.2    ||
+|| condensed TOC   || [http://rpg.geekdo.com/user/aramis William Hostman] || 2010-04-09 || planned  || 0.1.3    ||
