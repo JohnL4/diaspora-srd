@@ -3,15 +3,15 @@
 \begin{table*}[hp]
 \iflandscape
 {\begin{tabular}{p{0.2\textwidth}ccp{0.65\textwidth}}}
-{\begin{tabular}{p{0.15\textwidth}ccp{0.61\textwidth}}}
+{\begin{tabular}{p{0.18\textwidth}ccp{0.60\textwidth}}}
 \toprule
-Stunt		& BP	& Tech	& Description %
+Stunt		& BP	& TL	& Description %
 \DTLforeach{armour-stunts}{%
 \DTLname=name,\DTLbp=bp,\DTLtl=tl,\DTLdesc=desc}%
 {%
 \DTLiffirstrow{\\\midrule}{\\}%
 \DTLifoddrow{\rowcolor{DTLoddrow}}{}%
-\DTLname	& \DTLbp	& \DTLtl	& \DTLdesc %
+\raggedright\DTLname	& \DTLbp	& \DTLtl	& \DTLdesc %
 }%
 \\\bottomrule
 \end{tabular}

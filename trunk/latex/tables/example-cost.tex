@@ -1,12 +1,17 @@
-\iflandscape
-{\begin{wraptable}{r}[\sidebarwidth]{6.5cm}}
-{\begin{wraptable}{r}[\sidebarwidth]{6.75cm}}
+% \iflandscape
+% {\begin{wraptable}{r}[\sidebarwidth]{6.5cm}}
+% {\begin{wraptable}{r}[\sidebarwidth]{6.75cm}}
+\begin{wraptable}[24]{r}[\sidebarwidth]{\halfbarwidth}
+% \colorbox{sbbackground}{\begin{minipage}{\halfbarinnerwidth}%
+\begin{shadebox}{\halfbarinnerwidth}
+
 % \begin{sidebox}{Example costs}
 % \begin{table}[ht]
 \centering
-\iflandscape
-{\begin{tabular}{cp{0.375\columnwidth}}}
-{\begin{tabular}{cp{0.4\columnwidth}}}
+\begin{tabular}{cp{0.75\halfbarinnerwidth}}
+% \iflandscape
+% {\begin{tabular}{cp{0.375\columnwidth}}}
+% {\begin{tabular}{cp{0.4\columnwidth}}}
 \toprule
 Cost	& Example \\
 \midrule 1
@@ -16,7 +21,7 @@ Cost	& Example \\
 & Civilian slug thrower \\
 \midrule 3
 & Military slug thrower \\
-& Single-passage ticket to another system \\
+& One-way ticket to another system \\
 & Civilian energy weapon \\
 \midrule 4
 & Vehicle (ground) \\
@@ -34,6 +39,8 @@ Cost	& Example \\
 & Military spacecraft \\
 \bottomrule
 \end{tabular}
+\end{shadebox}
+% \end{minipage}}
 \caption{Example costs}
 \label{tab:example-costs}
 % \end{table}

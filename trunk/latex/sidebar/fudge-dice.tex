@@ -1,10 +1,14 @@
 %%% Define some text blocks, and then lay them out depending on the
 %%% document layout.
+%
+%% blurb about fudge dice
 \def\FUDGEDICE{
 \index{dice!fudge dice}
 Almost every roll in \emph{Diaspora} is \dF: a single roll of four Fudge dice, yielding a range from -4 to +4. A Fudge die is a d6, with two faces marked -, two marked +, and two blank. You add up the +s, subtract the -s, and you have a total.
 The resultant probability curve is the same as rolling \texttt{4d3-8}, so you could use ordinary \texttt{d6}s and treat 1--2 as -, 3--4 as blank, and 5--6 as +.
-}
+}%
+%
+%% blurb about alternate dice systems
 \def\ALTDICE{
 \index{dice!alternate systems}
 {\medskip\large\bfseries Option: alternate dice systems}
@@ -17,7 +21,9 @@ Roll two different-coloured six-sided dice and subtract one from the other. You 
 \item [\texttt{d6-d6}, $\pm4$]
 As above, but treat $\pm5$ as 0. This has the same numeric range as \dF, but with a better chance of an extreme result.
 \end{description}
-}
+}%
+%
+%% probability comparison table
 \def\DICETABLE{
 \begin{tabular}{r@{}l*3{r@{/}lr@{.}l}}
 \multicolumn{2}{c}{}
@@ -38,13 +44,15 @@ $\pm$&1	& 16&81	& 19&75	&  5&36	& 13&88	&  5&36	& 13&88 \\
 & 0	& 19&81	& 23&46	&  8&36	& 22&22	&  6&36	& 16&66 \\
 \bottomrule
 \end{tabular}
-}
-
-\begin{sidebox}*{Fudge dice}
-\ifthenelse{\boolean{LANDSCAPE}}
+}%
+%
+% \begin{sidebox}*{Fudge dice}
+\begin{wrapfigure}[20]{r}[\sidebarwidth]{\halfbarwidth}%*{Fudge dice}
+% \begin{sidetable}
+\ifthenelse{\boolean{LANDSCAPE}}%
 {
 % \begin{sidebox}[Dice probability distributions]{Fudge dice}[tab:fudge-dice]
-\centering
+\centering%
 \hspace*{\fill}
 \begin{tabular}{p{0.45\columnwidth}p{0.45\columnwidth}r}
 \multicolumn{2}{p{0.95\columnwidth}}{\FUDGEDICE} \\
@@ -52,12 +60,16 @@ $\pm$&1	& 16&81	& 19&75	&  5&36	& 13&88	&  5&36	& 13&88 \\
 \flushright \DICETABLE
 \end{tabular}
 \hspace*{\fill}
-}{
+}{%
+\colorbox{sbbackground}{\begin{minipage}{\halfbarinnerwidth}
+\sideboxtitle{Fudge dice}%
 \FUDGEDICE
 
 \ALTDICE
-
-\centering \DICETABLE
-}
+\end{minipage}}%
+% \centering \DICETABLE
+}%
 % \label{tab:4df-in-statistics}
-\end{sidebox}
+% \end{sidetable}
+\end{wrapfigure}
+% \end{sidebox}
