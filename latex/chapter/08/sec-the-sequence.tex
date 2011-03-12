@@ -10,12 +10,10 @@ When every player has had a chance to act with every platoon under his command, 
 
 A turn is a set of cycles through the sequence such that every player has had an opportunity to move every platoon under his control.
 
-\vfil
+% \vfil
 % \newpage
 
 \subsection{Move}\label{sec:platoon-combat-move}
-
-\input{sidebar/compelling-movement}
 
 Roll \skill{Movement} and move the number of shifts, up to the maximum movement permitted. If your movement places you in (or passes through) the same zone as an enemy unit, both you and it gain a \SPOTTED{} marker of value 3 and the moving unit ceases movement.
 
@@ -31,6 +29,8 @@ roll \skill{Movement} and move the number of shifts along the Re-arm track. Airc
 \item[March in formation]
 A platoon leader may choose to march his platoon in formation. He makes one \skill{Movement} roll and may move all of the units in his zone up to the maximum movement rate of the slowest unit in the zone. All of these units have now acted.
 \end{description}
+
+\input{sidebar/compelling-movement}
 
 If movement takes a unit out of line-of-sight from all enemy units, reduce any \SPOTTED{} marker by one.
 
@@ -73,7 +73,7 @@ Roll \skill{Signals} against another unit's \skill{Signals}. For each shift gene
 
 Jamming is not affected by range or line of sight. Targets need not be spotted. Units can have no more than four \OOC{} markers.
 
-\vfil
+% \vfil
 \subsection{Unjam}\label{sec:platoon-combat-unjam} % \href{sec:id198}
 
 Roll \skill{Signals} against zero and remove the shifts in \OOC{} counters from yourself. If this unit is a leader unit, it may remove \OOC{} counters from members of its platoon.
@@ -83,30 +83,34 @@ Unjamming is not affected by range or line of sight. It may be performed by unit
 % \vfil
 \subsection{Maneuver}\label{sec:platoon-combat-maneuver}
 
-Roll any Skill and supply some narration to describe the effect. Subtract range to target zone. Success places an Aspect on a zone. The Aspect is free-taggable once by an allied unit. Use maneuvers to model artillery cratering (\aspect{Cratered}), forward observation (\aspect{Laser designation}), covering fire (\aspect{Keeping our heads down}), and so on. Maneuvers that use \skill{Direct Fire}, \skill{Indirect Fire}, or \skill{Hand-to-Hand} grant \SPOTTED{} markers exactly as attacks of those type.
+Roll any Skill and supply some narration to describe the effect. 
+Subtract range to target zone. 
+Maneuvers are affected by range but not line of sight. 
+The table has to agree that the maneuver works despite the range and line of sight facts, however.
 
-Maneuvers cannot be used to place an Aspect on a unit. They can only be used to place Aspects on a zone.
+Success places a single \Aspect\ on a zone --- maneuvers cannot be used to place an \Aspect\ on a unit.
+The \Aspect\ is free-taggable once by an allied unit. 
 
-Maneuvers are affected by range but not line of sight. The table has to agree that the maneuver works despite the range and line of sight facts, however.
+The caller determines whether an \Aspect\ is \keyword{permanent} or \keyword{transient}:
+permanent \Aspects\ affect a zone directly. This includes things like \aspect{Cratered roadway}, \aspect{Forest fire}, and so on. 
+Transient \Aspects\ derive from the continuous action of an individual: \aspect{Targeting laser}, \aspect{Covering fire}, and so on, and last only until the end of the placing unit's next turn.
 
-Permanent Aspects are Aspects that affect a zone directly. This includes things like \aspect{Cratered roadway}, \aspect{Forest fire}, and so on. Transient Aspects are Aspects that derive from the continuous action of an individual. \aspect{Targeting laser}, \aspect{Covering fire}, and so on.
+Use maneuvers to model artillery cratering (\aspect{Cratered}), forward observation (\aspect{Laser designation}), covering fire (\aspect{Keeping our heads down}), and so on. Maneuvers that use \skill{Direct Fire}, \skill{Indirect Fire}, or \skill{Hand-to-Hand} grant \SPOTTED{} markers exactly as attacks of those type.
 
-Transient Aspects last only until the placing unit acts again, though it may use the Aspect in this last turn of its existence.
 
-The caller determines whether an Aspect is permanent or transient.
 
 % \clearpage
 % \newpage
-\vfil
+% \vfil
 \subsection{Spot}\label{sec:platoon-combat-spot}
 
 Roll \skill{Observation} against \skill{Camouflage} for any artillery that has fired or any other unit in Line of sight. Place a \SPOTTED\ marker on the unit including the number of shifts (or a \SPOTTED\ token for each shift if you're using glass beads or coins or similar). Failure by three or more generates spin for the defender. If the unit already has a \SPOTTED\ marker, increase it by the number of shifts.
 
-Spotting is not affected by range but is affected by line of sight. Units can have no more than four \SPOTTED\ markers.
-
 \input{sidebar/spotted}
 
-\newpage
+Spotting is not affected by range but is affected by line of sight. Units can have no more than four \SPOTTED\ markers.
+
+% \newpage
 \subsection{Cover}\label{sec:platoon-combat-cover}
 
 Roll \skill{Camouflage} against a target value of zero and reduce any \SPOTTED\ markers on the unit by the number of hits achieved. Covering is not affected by range or line of sight. It may be performed by units not currently in platoon membership.

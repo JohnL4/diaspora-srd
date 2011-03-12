@@ -17,11 +17,12 @@
 %%% Font specifications:
 \usepackage[T1]{fontenc}
 % \usepackage[OT2]{fontenc}
-\ifthenelse{\boolean{SANSSERIF}}
-{
+\ifsansserif{
   \usepackage[scaled]{helvet}
   \renewcommand*\familydefault{\sfdefault}
-}{}
+}{
+  \renewcommand*\familydefault{\rmdefault}
+}
 % \usepackage{cmss}
 
 \title{Diaspora SRD}
@@ -33,23 +34,29 @@
 % \makeglossary
 
 \begin{document}
-
 \frontmatter
 \maketitle
 
+{
+\thispagestyle{empty}
+\vfill
 \footnoterule
-% TODO bottom-align this
-% \footnotetext{
+\footnotesize
 This file version \LONGVERSION
 
 Diaspora is \copyright~\href{http://www.vsca.ca/Diaspora}{VSCA Publishing}
-\clearpage
 
+\LaTeX{} source code at \url{http://code.google.com/p/diaspora-srd/}
+}
+
+\clearpage
 \tableofcontents
-\clearpage
-\listoftables
-\mainmatter
 
+% \clearpage
+% \listoftables
+% \listoffigures
+
+\mainmatter
 \input{chapter/01}
 \input{chapter/02}
 \input{chapter/03}
@@ -60,18 +67,15 @@ Diaspora is \copyright~\href{http://www.vsca.ca/Diaspora}{VSCA Publishing}
 \input{chapter/08}
 \input{chapter/09}
 
-\backmatter
+% \clearpage
+% \listoftables
+% \listoffigures
 
-\input{inc/OGL}
+\backmatter
 
 \cleardoublepage
 \printindex
 
-%%% TODO bibliography?
-% \clearpage
-% \bibliographystyle{alpha}
-% \bibliographystyle{plain}
-% \bibliographystyle{apa}
-% \bibliography{inc/SRD.bib}
+\input{inc/OGL}
 
 \end{document}

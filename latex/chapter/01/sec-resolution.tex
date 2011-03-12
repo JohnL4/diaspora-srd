@@ -1,3 +1,4 @@
+\newpage
 \section{Resolution}
 \label{sec:resolution}
 
@@ -18,17 +19,18 @@ Players may tag as many free-taggable Aspects as they like that exist on their o
 
 Players may use any spin accumulated by them or an ally to gain +1 on their roll (see ``Shifts and Spin'', below). Any number of spin points may be used towards a given roll.
 
-\rulebox{
+\rulebox[
+Compels are before dice.
+Invokes, tags, and spin are after dice.
+]{
 Compels happen before the dice hit the table.
 Invokes, tags, and spin happen after the dice hit the table.
 }
 
 There are a couple of possible kinds of tasks you might run into:
 
-\input{sidebar/summary-rolls}
-
 % \newpage
-
+\vfil
 \subsection{Fixed Difficulty Roll}
 \label{sec:fixed-difficulty-roll}
 
@@ -45,31 +47,63 @@ The result is the number of shifts obtained.  Zero shifts is a success. Rolls th
 \label{sec:opposed-roll}
 
 \index{skills!opposed roll}
-You want to beat someone else at something. The defender rolls defensively and you need to meet or beat that roll offensively. Use fate points as before to increase your result. Your opponent may well do the same.
+You want to beat someone else at something. The defender rolls defensively and 
+you need to meet or beat that roll offensively. Use fate points as before to 
+increase your result. Your opponent may well do the same.
 
-An opposed roll is \dplusskill{} compared against an opponent's \dplusskill. Attacker and defender may use different skills. The result is the number of shifts obtained.
+An opposed roll is \dplusskill{} compared against an opponent's \dplusskill. 
+Attacker and defender may use different skills. The result is the number of 
+shifts obtained.
 
-Zero shifts is a success. Rolls that use shifts for effects do not generate effects with zero shifts. These may be useless successes.
+Zero shifts is a success. Rolls that use shifts for effects do not generate 
+effects with zero shifts. These may be useless successes.
 
 \subsection{Shifts and Spin}
 \label{sec:shifts-and-spin}
 
+\input{sidebar/summary-rolls}
+
 \index{skills!shift}\index{skills!spin}
-The degree to which you beat your target value is your \textbf{shift}. Shifts may have a mechanic effect. In combat, for example, shifts determine the amount of damage done. If you exceed your opponent when you make a defensive roll that does not have any effect other than being a successful defense, you don't get shifts. Instead, for every three by which you exceed the attacking roll, you generate \textbf{spin}.
+The degree to which you beat your target value is your \keyword{shift}. Shifts 
+may have a mechanic effect. In combat, for example, shifts determine the amount 
+of damage done. If you exceed your opponent when you make a defensive roll that 
+does not have any effect other than being a successful defense, you don't get 
+shifts. Instead, \emph{for every three} by which you exceed the attacking roll, 
+you generate \keyword{spin}.
 
-Spin can be used by you or an ally to gain +1 on a roll --- basically your defensive maneuver put your opponent at a disadvantage or one of your allies at an advantage somehow. You need to use up spin by the time the turn comes back to whoever generated it --- he's the last person that can take advantage.
+Spin can be used by you or an ally to gain +1 on a roll --- basically your 
+defensive maneuver put your opponent at a disadvantage or one of your allies at 
+an advantage somehow. You need to use up spin by the time the turn comes back 
+to whoever generated it --- he's the last person that can take advantage.
 
-It can be handy to throw some kind of token on the table to indicate spin and let anyone pick it up. Index cards with the generator's name on it greatly aid remembering when it expires.
+It can be handy to throw some kind of token on the table to indicate spin and 
+let anyone pick it up. Index cards with the generator's name on it greatly aid 
+remembering when it expires.
 
 \index{shifts}
-\rulebox{Each number above the target value is called a shift.}
+\rulebox{Each number above the target value is called a \keyword{shift}.}
 Hitting the target number exactly is a success, but generates no shifts. When an attacker fails by 3 or more (negative three shifts), the defender gets spin.
 
-Spin can be spent by the defender or any ally, and must be used before the end of the defender's next turn. Defenses that can harm the attacker (such as defending against \Skill{Electronic Warfare} in space combat) do not generate spin because they already have an effect beyond successful defense.
+Spin can be spent by the defender or any ally, and must be used before the end of the defender's next turn. Defenses that can harm the attacker (such as defending against \skill{Electronic Warfare} in space combat) do not generate spin because they already have an effect beyond successful defense.
 
 \subsection{Declarations}
 \label{sec:declarations}
 
 \index{declarations}
-At any time a player can pay a fate point and declare a true fact about the world as pertains to the character's apex Skill. The referee can return the fate point and modify the fact but cannot simply deny it altogether.
+At any time a player can pay a fate point and declare a true fact about the world as pertains to the character's apex \Skill. The referee can return the fate point and modify the fact but cannot simply deny it altogether.
+
+\subsection{Skill interactions}\label{sec:skill-interactions} % \href{sec:id67}
+
+Sometimes it makes sense to have two skills interact to form the basis of a
+check.
+\begin{description}
+\item[Skill A is \emph{Limited by} Skill B]~
+
+This indicates that Skill A is used for the check but at a level no
+higher than Skill B.
+\item[Skill A is \emph{Amplified by} Skill B]~
+
+This indicates that Skill A is used for the check. If Skill B exceeds Skill
+A, then an additional +1 is granted.
+\end{description}
 
