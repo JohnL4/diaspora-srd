@@ -13,6 +13,7 @@ Below are feature requests, and corrections suggested.
 || condensed TOC        || [http://rpg.geekdo.com/user/aramis William Hostman] || 2010-04-09 || planned  || 0.1.3    ||
 || table of skills      || RL players                                          || 2010-05-08 || planned  || 0.1.3    ||
 || Armour-building info || RL players                                          || 2010-05-08 || planned  || 0.1.3    ||
+|| e-Book format        || david.leaman                                        || 2011-07-09 || planned  || 0.1.3    ||
 
 = Errata =
 
