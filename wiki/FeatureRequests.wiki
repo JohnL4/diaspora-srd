@@ -17,5 +17,5 @@ Below are feature requests, and corrections suggested.
 = Errata =
 
 || *Description*                                          || *section* || *date*     || *status* || *target ||
-|| Misalignment of "High capacity magazine" stunt listing || 9.4       || 2010-05-08 || planned  || 0.1.3   ||
+|| Misalignment of "High capacity magazine" stunt listing || 9.4       || 2010-05-08 || done     || 0.1.3   ||
 
