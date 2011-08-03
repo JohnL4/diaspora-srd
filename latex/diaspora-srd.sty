@@ -5,7 +5,7 @@
 %%% with this file; if not see:
 %%% http://www.perlfoundation.org/artistic_license_2_0
 %%%
-\def\VERSION{0.1.4}
+\def\VERSION{0.2.0}
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{diaspora-srd}
 	[2011/06/12 v\VERSION
@@ -44,6 +44,9 @@
 \RequirePackage{tikz}
 \RequirePackage{xcolor}[2007/01/21]
 % \RequirePackage{graphicx}[1999/02/16]
+
+%%% For including whole PDFs:
+\RequirePackage{pdfpages}
 
 %%% Option parsing and command definition
 \RequirePackage{xparse}[2008-08-03]
@@ -144,14 +147,9 @@
 %
 
 %% convenience shortcut
-\DeclareDocumentCommand \rulebox {om}{
-\calloutbox{Rule}{\IfValueTF{#1}{#1}{#2}}
-\textbf{Rule:~} #2 
-}%
-% \newcommand{\rulebox}[1]{ \textbf{Rule:~} \calloutbox{Rule}{#1} #1}%
-% or possibly, if it's not going to be confused with \rule:
-% \newcommand{\Rule}[1] { \calloutbox{Rule}{#1} \textbf{Rule:} #1}%
-%
+\newcommand{\rulebox}[1]{\calloutbox{Rule}{#1}}%
+% \calloutbox{Rule}{\IfValueTF{#1}{#1}{#2}}
+%\textbf{Rule:~} #2  %% TODO remove this inline text
 
 %%% Sidebox float
 %%% This is a box that is set apart from the main text, containing
