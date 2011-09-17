@@ -1,0 +1,46 @@
+#!/usr/bin/perl
+# Read in a flat file and output a TeX file suitable for datatool
+use warnings;
+use strict;
+use Carp;
+
+# usage: db2tex < infile.db > outfile.tex
+
+our $table;
+our $data;
+our $num = 0;
+while (<>) {
+	$num++;
+	chomp;
+	#print "$num:$_:$/";
+	(our $line) = (/^\s*([^#\s][^#]*\S)?\s*(#.*)?$/);
+	$line or next;
+	if (/^\[\[([^\]\s]+)\]\]$/) {
+		$table = $1;
+		unless (defined $data->{$table}) {
+			$data->{$table} = {'fields'=>[], 'data'=>[]};
+		}
+	} elsif (/^\[([^\[\]]+)\]$/) {
+		$table || croak("syntax error on line $num: no table name defined");
+		@{$data->{$table}->{'fields'}} = split( /\s+/, $1) or croak("syntax error on line $num: empty brackets");
+	} else {
+		$table || croak("syntax error on line $num: no table name defined");
+		my %values;
+		#push @data->{$table}->{'data'}, {map {$_ => ''} @data->{$table}->{'fields'}};
+		@values{@{$data->{$table}->{'fields'}}} = split /'?\s+'?/, $line, @{$data->{$table}->{'fields'}};
+		push @{$data->{$table}->{'data'}}, \%values;
+	}
+}
+
+while (($table, our $defs) = each %$data) {
+	print("\\DTLnewdb{$table}$/");
+	for my $values (@{$defs->{'data'}}) {
+		print("\\DTLnewrow{$table}$/");
+		while (our ($key,$val) = each %$values) {
+			print("\\DTLnewdbentry{$table}{$key}{$val}$/");
+		}
+	}
+}
+
+	
+
