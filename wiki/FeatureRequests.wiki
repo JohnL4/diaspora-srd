@@ -15,6 +15,7 @@ Below are feature requests, and corrections suggested.
 || Armour-building info || RL players                                          || 2010-05-08 || planned  || 0.2.x    ||
 || Appendix: sheets     || [http://rpggeek.com/user/vacavriach Big John]       || 2011-03-25 || done     || 0.2.0    ||
 || e-Book format        || david.leaman                                        || 2011-07-09 || planned  || 0.3.x    ||
+|| Fix "First Blood" rule: Scene instead of Session || http://rpggeek.com/user/Chronus || 2011-11-06 || planned || 0.3.x ||
 
 
 = Errata =
